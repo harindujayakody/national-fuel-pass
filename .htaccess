@@ -1,0 +1,100 @@
+# ═══════════════════════════════════════════════════════════════
+#  Sri Lanka National Fuel Pass — Apache .htaccess
+#  Site: https://fuelpass.infiax.com
+#  Maintained by: Infiax Pvt Ltd
+# ═══════════════════════════════════════════════════════════════
+
+Options -Indexes
+ServerSignature Off
+
+# ─── Custom Error Pages ─────────────────────────────────────────
+ErrorDocument 400 /400.html
+ErrorDocument 401 /401.html
+ErrorDocument 403 /403.html
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+ErrorDocument 503 /503.html
+
+# ─── Default Document ───────────────────────────────────────────
+DirectoryIndex index.html
+
+# ─── HTTPS Redirect ─────────────────────────────────────────────
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Force HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Remove trailing slashes (except root)
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+  # Remove .html extension from URLs
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}\.html -f
+  RewriteRule ^([^\.]+)$ $1.html [NC,L]
+</IfModule>
+
+# ─── Security Headers ────────────────────────────────────────────
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-XSS-Protection "1; mode=block"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self';"
+  # Remove server info
+  Header unset Server
+  Header unset X-Powered-By
+</IfModule>
+
+# ─── MIME Types ──────────────────────────────────────────────────
+<IfModule mod_mime.c>
+  AddType application/javascript          js mjs
+  AddType text/css                        css
+  AddType image/svg+xml                   svg svgz
+  AddType image/webp                      webp
+  AddType image/avif                      avif
+  AddType font/woff                       woff
+  AddType font/woff2                      woff2
+  AddType application/manifest+json      webmanifest
+  AddType text/cache-manifest             appcache
+</IfModule>
+
+# ─── Compression ─────────────────────────────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/json application/xml
+  AddOutputFilterByType DEFLATE image/svg+xml font/woff font/woff2
+</IfModule>
+
+# ─── Browser Caching ─────────────────────────────────────────────
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html                 "access plus 1 hour"
+  ExpiresByType text/css                  "access plus 1 month"
+  ExpiresByType application/javascript    "access plus 1 month"
+  ExpiresByType image/png                 "access plus 1 year"
+  ExpiresByType image/jpg                 "access plus 1 year"
+  ExpiresByType image/jpeg                "access plus 1 year"
+  ExpiresByType image/gif                 "access plus 1 year"
+  ExpiresByType image/webp                "access plus 1 year"
+  ExpiresByType image/svg+xml             "access plus 1 year"
+  ExpiresByType image/ico                 "access plus 1 year"
+  ExpiresByType font/woff                 "access plus 1 year"
+  ExpiresByType font/woff2                "access plus 1 year"
+</IfModule>
+
+# ─── Prevent access to sensitive files ───────────────────────────
+<FilesMatch "(^\.htaccess|\.htpasswd|\.env|composer\.json|package\.json|\.git)">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
+
+# ─── Block bad bots ──────────────────────────────────────────────
+<IfModule mod_rewrite.c>
+  RewriteCond %{HTTP_USER_AGENT} (bot|crawler|spider|scan|wget|libwww) [NC,OR]
+  RewriteCond %{HTTP_USER_AGENT} (masscan|nikto|sqlmap|nmap|zgrab) [NC]
+  RewriteRule .* - [F,L]
+</IfModule>

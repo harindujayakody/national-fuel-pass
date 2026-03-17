@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://fuelpass.infiax.com/</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelpass.infiax.com/"/>
+    <xhtml:link rel="alternate" hreflang="si" href="https://fuelpass.infiax.com/"/>
+  </url>
+
+  <!-- Guide / Docs -->
+  <url>
+    <loc>https://fuelpass.infiax.com/docs</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelpass.infiax.com/docs"/>
+    <xhtml:link rel="alternate" hreflang="si" href="https://fuelpass.infiax.com/docs"/>
+  </url>
+
+</urlset>

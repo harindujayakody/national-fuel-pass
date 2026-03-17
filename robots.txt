@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /*.htaccess
+Disallow: /400.html
+Disallow: /401.html
+Disallow: /403.html
+Disallow: /500.html
+Disallow: /503.html
+
+Sitemap: https://fuelpass.infiax.com/sitemap.xml
