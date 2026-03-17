@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>How to Get Your Fuel Pass QR Code · Sri Lanka Guide</title>
+<meta name="description" content="Step-by-step guide to get or recover your Sri Lanka National Fuel Pass QR code from fuelpass.gov.lk. Register, login, and generate your card."/>
+<meta name="author" content="Infiax Pvt Ltd"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Noto+Sans+Sinhala:wght@400;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --r:#D42020;--r2:#A81A1A;
+  --txt:#111827;--mut:#6B7280;--bdr:#E5E7EB;
+  --bg:#F8F9FB;--wh:#fff;
+  --fh:'Poppins',sans-serif;
+  --fs:'Noto Sans Sinhala',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--fh);background:var(--bg);color:var(--txt);min-height:100vh}
+
+/* NAV */
+.nav{
+  background:#fff;border-bottom:1px solid var(--bdr);
+  padding:14px 24px;
+  display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:100;
+  box-shadow:0 1px 10px rgba(0,0,0,.05);
+}
+.nav-logo{font-family:var(--fh);font-weight:800;font-size:.95rem;letter-spacing:2px;color:#111;text-decoration:none;text-transform:uppercase}
+.nav-logo span{color:var(--r)}
+.nav-back{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:7px 16px;border-radius:8px;background:var(--r);color:#fff;
+  font-size:.72rem;font-weight:700;letter-spacing:.5px;text-decoration:none;
+  transition:background .2s;text-transform:uppercase;
+}
+.nav-back:hover{background:var(--r2)}
+
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,var(--r2) 0%,var(--r) 60%,#E03030 100%);
+  padding:40px 24px 36px;text-align:center;position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+  background-size:28px 28px;
+}
+.hero-inner{position:relative;z-index:1;max-width:600px;margin:0 auto}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);
+  border-radius:40px;padding:5px 16px;font-size:.65rem;
+  letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.85);
+  margin-bottom:16px;
+}
+.hero h1{
+  font-family:var(--fh);font-weight:800;font-size:clamp(1.5rem,5vw,2.4rem);
+  color:#fff;line-height:1.2;letter-spacing:-0.5px;margin-bottom:10px;
+}
+.hero p{font-size:.88rem;color:rgba(255,255,255,.75);line-height:1.7;max-width:460px;margin:0 auto 20px}
+
+/* Lang toggle */
+.hero-lang{display:flex;justify-content:center;gap:6px;margin-top:4px}
+.hlang-btn{
+  padding:6px 18px;border-radius:8px;border:1.5px solid rgba(255,255,255,.3);
+  background:transparent;color:rgba(255,255,255,.6);font-family:var(--fh);
+  font-size:.72rem;font-weight:700;cursor:pointer;transition:all .2s;
+}
+.hlang-btn.active,.hlang-btn:hover{background:rgba(255,255,255,.2);color:#fff;border-color:rgba(255,255,255,.6)}
+.hlang-btn.si{font-family:var(--fs);font-size:.78rem;letter-spacing:0}
+
+/* MAIN */
+.main{max-width:720px;margin:0 auto;padding:32px 20px 60px}
+
+/* NOTICE BOX */
+.notice{
+  background:#FFF7ED;border:1.5px solid #FED7AA;border-radius:14px;
+  padding:16px 18px;margin-bottom:28px;
+  display:flex;gap:12px;align-items:flex-start;
+}
+.notice i{color:#F97316;font-size:1.1rem;flex-shrink:0;margin-top:2px}
+.notice-body{font-size:.82rem;color:#92400E;line-height:1.7}
+.notice-body strong{display:block;font-size:.88rem;color:#7C2D12;margin-bottom:3px;font-weight:700}
+
+/* SINHALA CALLOUT */
+.si-callout{
+  background:linear-gradient(135deg,#FFF5F5,#FFF0F0);
+  border:1.5px solid rgba(212,32,32,.2);border-radius:14px;
+  padding:18px 20px;margin-bottom:28px;
+  font-family:var(--fs);font-size:.88rem;color:#374151;
+  line-height:2;position:relative;overflow:hidden;
+  display:none;
+}
+.si-callout.show{display:block}
+.si-callout::before{
+  content:'🇱🇰';position:absolute;right:16px;top:14px;font-size:1.8rem;opacity:.15;
+}
+.si-callout a{color:var(--r);font-weight:700;word-break:break-all}
+
+/* SECTIONS */
+.section{margin-bottom:28px}
+.section-header{
+  display:flex;align-items:center;gap:12px;margin-bottom:16px;
+}
+.section-num{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--r);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--fh);font-size:.95rem;font-weight:800;flex-shrink:0;
+}
+.section-title{font-family:var(--fh);font-size:1rem;font-weight:800;color:var(--txt)}
+.section-title.si{font-family:var(--fs);font-size:.95rem}
+.section-card{
+  background:#fff;border-radius:14px;
+  box-shadow:0 2px 12px rgba(0,0,0,.06),0 0 0 1px rgba(0,0,0,.04);
+  padding:18px 20px;
+}
+.section-card p{font-size:.85rem;color:var(--mut);line-height:1.75;margin-bottom:10px}
+.section-card p:last-child{margin-bottom:0}
+.section-card p.si{font-family:var(--fs);font-size:.86rem;line-height:2}
+.section-card a{color:var(--r);font-weight:700;word-break:break-all;text-decoration:none}
+.section-card a:hover{text-decoration:underline}
+.section-card strong{color:var(--txt);font-weight:700}
+
+/* STEPS */
+.step-list{display:flex;flex-direction:column;gap:10px;margin-top:4px}
+.step-row{
+  display:flex;align-items:flex-start;gap:12px;
+  padding:12px 14px;border-radius:10px;background:#F8F9FB;
+  border:1px solid var(--bdr);
+}
+.step-row i{color:var(--r);font-size:.9rem;flex-shrink:0;margin-top:2px}
+.step-row p{font-size:.82rem;color:var(--mut);line-height:1.65;margin:0}
+.step-row p.si{font-family:var(--fs);font-size:.83rem;line-height:2}
+.step-row strong{color:var(--txt)}
+
+/* URL pill */
+.url-pill{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#F1F5F9;border:1.5px solid #CBD5E1;border-radius:10px;
+  padding:10px 16px;margin:10px 0;font-size:.82rem;color:#0F172A;
+  word-break:break-all;font-family:monospace;font-weight:600;
+  width:100%;
+}
+.url-pill i{color:var(--r);flex-shrink:0;font-size:.85rem}
+.url-pill a{color:var(--r);text-decoration:none;font-weight:700}
+.url-pill a:hover{text-decoration:underline}
+
+/* TIP BOX */
+.tip{
+  background:#F0FFF4;border:1.5px solid #86EFAC;border-radius:12px;
+  padding:14px 16px;margin-top:12px;
+  display:flex;gap:10px;align-items:flex-start;
+}
+.tip i{color:#16A34A;flex-shrink:0;margin-top:2px}
+.tip p{font-size:.8rem;color:#14532D;line-height:1.65;margin:0}
+.tip p.si{font-family:var(--fs);font-size:.8rem;line-height:2}
+
+/* RECOVERY BOX */
+.recovery{
+  background:linear-gradient(135deg,#EFF6FF,#DBEAFE);
+  border:1.5px solid #93C5FD;border-radius:14px;
+  padding:18px 20px;margin-top:10px;
+}
+.recovery-title{
+  font-family:var(--fh);font-size:.88rem;font-weight:800;color:#1E40AF;
+  display:flex;align-items:center;gap:8px;margin-bottom:10px;
+}
+.recovery p{font-size:.82rem;color:#1E3A8A;line-height:1.75;margin-bottom:8px}
+.recovery p:last-child{margin-bottom:0}
+.recovery p.si{font-family:var(--fs);font-size:.83rem;line-height:2}
+.recovery strong{color:#1E3A8A;font-weight:700}
+
+/* CTA footer */
+.cta-footer{
+  background:linear-gradient(135deg,var(--r2),var(--r));
+  border-radius:16px;padding:28px 24px;text-align:center;margin-top:12px;
+  position:relative;overflow:hidden;
+}
+.cta-footer::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:24px 24px}
+.cta-footer-inner{position:relative;z-index:1}
+.cta-footer h3{font-family:var(--fh);font-weight:800;font-size:1.1rem;color:#fff;letter-spacing:1px;margin-bottom:6px}
+.cta-footer p{font-size:.8rem;color:rgba(255,255,255,.72);margin-bottom:18px}
+.cta-footer a{
+  display:inline-flex;align-items:center;gap:9px;
+  background:#fff;color:var(--r);border:none;border-radius:10px;
+  padding:12px 28px;font-family:var(--fh);font-size:.88rem;font-weight:800;
+  letter-spacing:1px;text-decoration:none;text-transform:uppercase;
+  transition:all .2s;box-shadow:0 4px 16px rgba(0,0,0,.15);
+}
+.cta-footer a:hover{transform:translateY(-2px);box-shadow:0 6px 22px rgba(0,0,0,.2)}
+
+/* DIVIDER */
+.divider{height:1px;background:var(--bdr);margin:24px 0}
+
+/* page footer */
+.page-footer{text-align:center;padding:16px;font-size:.65rem;color:#9CA3AF;line-height:1.8}
+.page-footer a{color:var(--r);text-decoration:none;font-weight:700}
+
+@media(max-width:480px){
+  .hero h1{font-size:1.4rem}
+  .main{padding:20px 14px 48px}
+  .section-card{padding:14px 14px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="nav-logo" href="fuel-pass-generator.html">FUEL<span>PASS</span></a>
+  <a class="nav-back" href="fuel-pass-generator.html">
+    <i class="fa-solid fa-arrow-left"></i> Back to Generator
+  </a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <i class="fa-solid fa-book-open"></i> Step-by-Step Guide
+    </div>
+    <h1>How to Get Your<br>Fuel Pass QR Code</h1>
+    <p>Everything you need to know to register, login, and recover your official Sri Lanka National Fuel Pass QR code.</p>
+    <div class="hero-lang">
+      <button class="hlang-btn active" onclick="setDocLang('en')">English</button>
+      <button class="hlang-btn si" onclick="setDocLang('si')">සිංහල</button>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- Sinhala community callout -->
+  <div class="si-callout" id="si-callout">
+    <strong>🇱🇰 ෆුවල් පාස් QR එක ගන්නා ආකාරය</strong>
+    ෆෝන් නම්බර් එක ගහලා OTP Submit කරාම කලින් තිබ්බ QR එකම ආයෙ ලැබෙනවා.<br/>
+    <strong>➜ ලොගින් කරන්න:</strong> <a href="https://fuelpass.gov.lk/login/" target="_blank" rel="noopener">https://fuelpass.gov.lk/login/</a><br/>
+    <strong>➜ අලුතින් Register වෙන්න:</strong> <a href="https://fuelpass.gov.lk/register/" target="_blank" rel="noopener">https://fuelpass.gov.lk/register/</a><br/><br/>
+    කලින් QR හැදූ සිම් කාඩ් මතකද? ➜ ඔයා ළඟ ඇති <strong>හැම සිම් නම්බර් එකක්ම</strong> Submit කරලා බලන්න. OTP ආ නම්බර් එකෙන් Login කළාම කලින් QR එක ආයෙ ලැබෙනවා.
+  </div>
+
+  <!-- NOTICE -->
+  <div class="notice" id="notice-en">
+    <i class="fa-solid fa-triangle-exclamation"></i>
+    <div class="notice-body">
+      <strong>Before you use the generator</strong>
+      You need to first get your official QR code image from the government portal at <a href="https://fuelpass.gov.lk" target="_blank" rel="noopener">fuelpass.gov.lk</a>. This guide shows you exactly how to do that.
+    </div>
+  </div>
+
+  <!-- STEP 1 — LOGIN / REGISTER -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <div>
+        <div class="section-title en-txt">Go to the Official Fuel Pass Portal</div>
+        <div class="section-title si si-txt" style="display:none">නිල ෆුවල් පාස් වෙබ් අඩවියට යන්න</div>
+      </div>
+    </div>
+    <div class="section-card">
+      <p class="en-txt">Open your browser and visit the official Sri Lanka National Fuel Pass website:</p>
+      <p class="si-txt" style="display:none">ඔබේ බ්‍රව්සරය විවෘත කර නිල ශ්‍රී ලංකා ෆුවල් පාස් වෙබ් අඩවිය වෙත යන්න:</p>
+      <div class="url-pill">
+        <i class="fa-solid fa-link"></i>
+        <a href="https://fuelpass.gov.lk/login/" target="_blank" rel="noopener">https://fuelpass.gov.lk/login/</a>
+      </div>
+      <p class="en-txt" style="margin-top:8px">If you are a <strong>new user</strong>, register here first:</p>
+      <p class="si-txt" style="display:none;margin-top:8px"><strong>අලුත් පරිශීලකයෙකු</strong> නම්, මෙතනින් Register වන්න:</p>
+      <div class="url-pill">
+        <i class="fa-solid fa-user-plus"></i>
+        <a href="https://fuelpass.gov.lk/register/" target="_blank" rel="noopener">https://fuelpass.gov.lk/register/</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 2 — LOGIN WITH OTP -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <div>
+        <div class="section-title en-txt">Login with Your Phone Number & OTP</div>
+        <div class="section-title si si-txt" style="display:none">ෆෝන් නම්බර් සහ OTP දෙන්න</div>
+      </div>
+    </div>
+    <div class="section-card">
+      <div class="step-list">
+        <div class="step-row">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+          <p class="en-txt">Enter your <strong>Sri Lankan mobile number</strong> (the one you used when registering for the fuel pass).</p>
+          <p class="si-txt" style="display:none">ෆුවල් පාස් Register කරද්දී ගාවූ <strong>ශ්‍රී ලාංකිය ජංගම දුරකථන නම්බරය</strong> ඇතුළු කරන්න.</p>
+        </div>
+        <div class="step-row">
+          <i class="fa-solid fa-message"></i>
+          <p class="en-txt">Click <strong>Send OTP</strong>. You will receive a one-time password via SMS on your registered number.</p>
+          <p class="si-txt" style="display:none"><strong>Send OTP</strong> ක්ලික් කරන්න. ඔබේ ෆෝනට SMS OTP කේතයක් ලැබෙනවා.</p>
+        </div>
+        <div class="step-row">
+          <i class="fa-solid fa-key"></i>
+          <p class="en-txt">Enter the <strong>OTP code</strong> received via SMS and click <strong>Submit</strong> to log in.</p>
+          <p class="si-txt" style="display:none">SMS ලෙස ලැබූ <strong>OTP කේතය</strong> ඇතුළු කර <strong>Submit</strong> ක්ලික් කරන්න.</p>
+        </div>
+        <div class="step-row">
+          <i class="fa-solid fa-qrcode"></i>
+          <p class="en-txt">Your <strong>QR code will appear on screen</strong>. This is the same QR code as before — it does not change.</p>
+          <p class="si-txt" style="display:none">ඔබේ <strong>QR කේතය තිරයේ දිස් වේ</strong>. කලින් ලැබිච්ච QR එකම — මෙය වෙනස් නොවේ.</p>
+        </div>
+      </div>
+      <div class="tip">
+        <i class="fa-solid fa-lightbulb"></i>
+        <p class="en-txt">Take a <strong>screenshot</strong> of your QR code and save it — you'll need this image to generate your card below.</p>
+        <p class="si-txt" style="display:none">ඔබේ QR කේතයේ <strong>Screenshots</strong> ගෙන සේව් කරන්න — කාඩ්පත හදන්න ඒ රූපය ඕනෑ වෙනවා.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 3 — FIND OLD QR -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <div>
+        <div class="section-title en-txt">Can't Remember Which Number You Used?</div>
+        <div class="section-title si si-txt" style="display:none">කලින් ගාවූ නම්බර් මතක නැද්ද?</div>
+      </div>
+    </div>
+    <div class="section-card">
+      <p class="en-txt">If you previously registered for a fuel pass but can't remember which SIM you used, don't worry — try each of your numbers:</p>
+      <p class="si-txt" style="display:none">කලින් ෆුවල් පාස් Register කළා නමුත් කුමන සිම් කාඩ් ගාවූවද මතක නැතිනම් — ඔබ ළඟ ඇති <strong>හැම සිම් නම්බර් එකක්ම</strong> Submit කරලා බලන්න:</p>
+      <div class="recovery">
+        <div class="recovery-title">
+          <i class="fa-solid fa-rotate-left"></i>
+          <span class="en-txt">Recovery Method</span>
+          <span class="si-txt" style="display:none">QR ආපසු ගැනීමේ ක්‍රමය</span>
+        </div>
+        <p class="en-txt">
+          1. Go to <a href="https://fuelpass.gov.lk/login/" target="_blank" rel="noopener">fuelpass.gov.lk/login</a><br/>
+          2. Enter <strong>one of your SIM numbers</strong> and click Send OTP<br/>
+          3. If you get a message saying <strong>"OTP sent"</strong>, that is the number linked to your fuel pass<br/>
+          4. Enter the OTP you received to log in and view your QR<br/>
+          5. If you get an error, try your <strong>next SIM number</strong> and repeat
+        </p>
+        <p class="si-txt" style="display:none">
+          1. <a href="https://fuelpass.gov.lk/login/" target="_blank" rel="noopener">fuelpass.gov.lk/login</a> වෙත යන්න<br/>
+          2. <strong>ඔබේ සිම් නම්බර් එකක්</strong> ඇතුළු කර Send OTP ක්ලික් කරන්න<br/>
+          3. <strong>"OTP sent"</strong> යන පණිවිඩය ආවොත් — ඒ නම්බරෙන් ෆුවල් පාස් Register කළා<br/>
+          4. ලැබෙන OTP ඇතුළු කර Login කරන්න — කලින් QR එකම ලැබේ<br/>
+          5. Error ආවොත් — <strong>ඊළඟ සිම් නම්බර් එක</strong> try කරන්න
+        </p>
+      </div>
+      <div class="tip" style="margin-top:12px">
+        <i class="fa-solid fa-circle-info"></i>
+        <p class="en-txt">Your QR code is <strong>permanent</strong> — it stays the same every time you log in. You only need to get it once and save the screenshot.</p>
+        <p class="si-txt" style="display:none">ඔබේ QR කේතය <strong>ස්ථිර</strong> — සෑම ලොගිනයකදීම එකම QR ලැබේ. එක පාරක් ගෙන Screenshot ගෙන තබා ගන්න.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 4 — GENERATE CARD -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <div>
+        <div class="section-title en-txt">Generate Your Card</div>
+        <div class="section-title si si-txt" style="display:none">ඔබේ කාඩ්පත සාදා ගන්න</div>
+      </div>
+    </div>
+    <div class="section-card">
+      <div class="step-list">
+        <div class="step-row">
+          <i class="fa-solid fa-arrow-pointer"></i>
+          <p class="en-txt">Come back to this generator and click <strong>"Build Your Own Card"</strong> on the home screen.</p>
+          <p class="si-txt" style="display:none">Generator වෙත ආයෙ පැමිණ Home Screen හි <strong>"ඔබේ කාඩ්පත සාදන්න"</strong> ක්ලික් කරන්න.</p>
+        </div>
+        <div class="step-row">
+          <i class="fa-solid fa-droplet"></i>
+          <p class="en-txt">Enter your <strong>weekly fuel quota in litres</strong> (shown on your official pass).</p>
+          <p class="si-txt" style="display:none">ඔබේ <strong>සතිපතා ඉන්ධන කෝටාව ලීටරවලින්</strong> ඇතුළු කරන්න (නිල පාස් එකේ සඳහන්).</p>
+        </div>
+        <div class="step-row">
+          <i class="fa-solid fa-image"></i>
+          <p class="en-txt">Upload the <strong>screenshot of your QR code</strong> that you saved from the government portal.</p>
+          <p class="si-txt" style="display:none">රාජ්‍ය වෙබ් අඩවියෙන් සේව් කළ <strong>QR Screenshot රූපය</strong> Upload කරන්න.</p>
+        </div>
+        <div class="step-row">
+          <i class="fa-solid fa-id-card"></i>
+          <p class="en-txt">Click <strong>Generate Pass</strong> — your formatted card will appear instantly.</p>
+          <p class="si-txt" style="display:none"><strong>Generate Pass</strong> ක්ලික් කරන්න — ඔබේ කාඩ්පත ක්ෂණිකව දිස් වේ.</p>
+        </div>
+        <div class="step-row">
+          <i class="fa-solid fa-download"></i>
+          <p class="en-txt">Tap <strong>Download Pass</strong> to save the high-quality PNG image to your phone or computer.</p>
+          <p class="si-txt" style="display:none"><strong>Download Pass</strong> ඔබා ඔබේ ෆෝනයට හෝ PC ට PNG image save කරන්න.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CTA footer -->
+  <div class="cta-footer">
+    <div class="cta-footer-inner">
+      <h3>Ready to Build Your Card?</h3>
+      <p>Got your QR code screenshot? Generate your card now — free, private, instant.</p>
+      <a href="fuel-pass-generator.html">
+        <i class="fa-solid fa-bolt"></i> Build Your Card Now
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<!-- PAGE FOOTER -->
+<div class="page-footer">
+  Made with <span style="color:#E03">💗</span> by <a href="https://github.com/harindujayakody/national-fuel-pass" target="_blank" rel="noopener">Infiax Pvt Ltd</a> ·
+  <a href="https://github.com/harindujayakody/national-fuel-pass" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a> ·
+  Your data is never sent to our servers.
+</div>
+
+<script>
+var docLang='en';
+function setDocLang(l){
+  docLang=l;
+  document.querySelectorAll('.hlang-btn').forEach(function(b){b.classList.toggle('active',b.textContent.trim().startsWith(l==='en'?'En':'සි'))});
+  var isEn=l==='en';
+  document.querySelectorAll('.en-txt').forEach(function(el){el.style.display=isEn?'':'none'});
+  document.querySelectorAll('.si-txt').forEach(function(el){el.style.display=isEn?'none':''});
+  document.getElementById('si-callout').classList.toggle('show',!isEn);
+  document.getElementById('notice-en').style.display=isEn?'flex':'none';
+}
+</script>
+</body>
+</html>

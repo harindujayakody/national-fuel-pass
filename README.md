@@ -91,7 +91,7 @@ Just open `fuel-pass-generator.html` in any modern browser. No server needed.
 
 ```bash
 # Clone the repo
-git clone https://github.com/infiax/national-fuel-pass.git
+git clone https://github.com/harindujayakody/national-fuel-pass.git
 cd national-fuel-pass
 
 # Open in browser
@@ -209,6 +209,6 @@ Built with 💗 by **[Infiax Pvt Ltd](https://infiax.com)** — a Sri Lankan sof
 
 ## 📞 Support
 
-- 🐛 **Bug reports:** [Open an issue](https://github.com/infiax/national-fuel-pass/issues)
-- 💡 **Feature requests:** [Start a discussion](https://github.com/infiax/national-fuel-pass/discussions)
+- 🐛 **Bug reports:** [Open an issue](https://github.com/harindujayakody/national-fuel-pass/issues)
+- 💡 **Feature requests:** [Start a discussion](https://github.com/harindujayakody/national-fuel-pass/discussions)
 - 📧 **Contact:** hello@infiax.com

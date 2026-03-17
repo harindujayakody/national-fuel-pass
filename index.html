@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+
+<!-- ═══ SEO META ═══ -->
+<title>National Fuel Pass Generator · Sri Lanka | Build Your QR Card Free</title>
+<meta name="description" content="Build your official Sri Lanka National Fuel Pass card instantly. Upload your QR code, set your weekly quota, and download your digital pass card — 100% free, no account needed, all data stays on your device."/>
+<meta name="keywords" content="Sri Lanka fuel pass, national fuel pass, fuel quota QR, fuel pass generator, fuel pass card download, ඉන්ධන පාස්, fuel quota Sri Lanka"/>
+<meta name="author" content="Infiax Pvt Ltd"/>
+<meta name="robots" content="index, follow"/>
+<meta name="theme-color" content="#D42020"/>
+<link rel="canonical" href="https://fuelpass.infiax.com/"/>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="National Fuel Pass Generator · Sri Lanka"/>
+<meta property="og:description" content="Build your official Sri Lanka fuel quota pass card instantly. Free, private, no servers — your data stays on your device."/>
+<meta property="og:url" content="https://fuelpass.infiax.com/"/>
+<meta property="og:image" content="https://i.imgur.com/8xwykeR.png"/>
+<meta property="og:locale" content="en_LK"/>
+<meta property="og:site_name" content="FuelPass · Sri Lanka"/>
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="National Fuel Pass Generator · Sri Lanka"/>
+<meta name="twitter:description" content="Build your fuel quota pass card instantly — free, no account, data stays on your device."/>
+<meta name="twitter:image" content="https://i.imgur.com/8xwykeR.png"/>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"National Fuel Pass Generator","description":"Build your official Sri Lanka National Fuel Pass QR card instantly. Upload your QR code, set your weekly quota, download your digital pass — free, private, no server storage.","url":"https://fuelpass.infiax.com/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"LKR"},"creator":{"@type":"Organization","name":"Infiax Pvt Ltd"},"inLanguage":["en","si"]}
+</script>
+
+<!-- Fonts + Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Noto+Sans:wght@300;400;500;600&family=Noto+Sans+Sinhala:wght@400;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --r:#D42020;--r2:#A81A1A;--rg:rgba(212,32,32,.4);
+  --txt:#1A1520;--mut:#6B7280;--bdr:#E5E7EB;--wh:#fff;
+  --sh:0 4px 20px rgba(0,0,0,.08);
+  --fh:'Poppins',sans-serif;
+  --fb:'Noto Sans','Noto Sans Sinhala',sans-serif;
+}
+html,body{height:100%;width:100%;overflow:hidden;font-family:var(--fb);background:#F8F9FB}
+
+/* PAGE SYSTEM */
+.page{display:none;width:100%;height:100vh;flex-direction:column;overflow:hidden}
+.page.active{display:flex;animation:pgIn .35s cubic-bezier(.22,.68,0,1.1) both}
+@keyframes pgIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* LANG TOGGLE */
+.lang-toggle{display:flex;align-items:center;gap:2px;border-radius:8px;padding:3px;flex-shrink:0}
+.lang-btn{padding:5px 11px;font-size:.66rem;font-weight:700;cursor:pointer;border:none;background:transparent;color:rgba(255,255,255,.35);transition:all .2s;border-radius:5px;font-family:'Poppins',sans-serif;line-height:1;white-space:nowrap}
+.lang-btn.active{background:var(--r);color:#fff;box-shadow:0 2px 8px rgba(212,32,32,.5)}
+.lang-btn[data-lang="si"]{font-family:'Noto Sans Sinhala',sans-serif;font-size:.7rem;letter-spacing:0}
+.top-bar .lang-toggle{background:#F1F3F7;border:1px solid #E2E6ED}
+.top-bar .lang-btn{color:#999}
+.top-bar .lang-btn.active{background:var(--r);color:#fff}
+
+/*══════════ HOME PAGE ══════════*/
+#page-home{background:#fff;color:var(--txt);overflow:hidden}
+.hbg{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.hbg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 90% 70% at 110% -10%,rgba(212,32,32,.07) 0%,transparent 55%),radial-gradient(ellipse 70% 60% at -10% 110%,rgba(212,32,32,.05) 0%,transparent 55%),linear-gradient(160deg,#fff 0%,#FDF8F8 40%,#FFF5F5 70%,#fafafa 100%)}
+.hbg::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(212,32,32,.11) 1px,transparent 1px);background-size:30px 30px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,#000 20%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,#000 20%,transparent 100%)}
+.mesh{position:absolute;border-radius:50%;filter:blur(100px);animation:mf 14s ease-in-out infinite alternate;pointer-events:none}
+.m1{width:55vw;height:55vw;max-width:600px;max-height:600px;background:radial-gradient(circle,rgba(212,32,32,.09) 0%,transparent 70%);top:-20%;right:-15%;animation-delay:0s}
+.m2{width:40vw;height:40vw;max-width:450px;max-height:450px;background:radial-gradient(circle,rgba(212,32,32,.06) 0%,transparent 70%);bottom:-15%;left:-10%;animation-delay:-6s}
+@keyframes mf{to{transform:translate(25px,-35px) scale(1.1)}}
+.hgrid{position:absolute;right:-120px;top:-120px;width:500px;height:500px;border-radius:50%;border:1.5px solid rgba(212,32,32,.06);box-shadow:0 0 0 60px rgba(212,32,32,.03),0 0 0 130px rgba(212,32,32,.02),0 0 0 220px rgba(212,32,32,.015)}
+.slash{position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(to bottom,transparent,rgba(248,249,251,.8));pointer-events:none}
+
+/* HOME NAV */
+.hn{position:relative;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(0,0,0,.06);background:rgba(255,255,255,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);flex-shrink:0}
+.hn-logo{display:flex;align-items:center;gap:9px}
+.hn-logo-emblem{width:32px;height:32px;border-radius:50%;background:rgba(212,32,32,.06);border:1.5px solid rgba(212,32,32,.14);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hn-logo-emblem img{width:20px;height:auto;object-fit:contain}
+.hn-logo-text{font-family:'Poppins',sans-serif;font-weight:800;font-size:.9rem;letter-spacing:2px;color:#111;text-transform:uppercase}
+.hn-logo-text span{color:var(--r)}
+.hn-nav-right{display:flex;align-items:center;gap:10px}
+.hn-history-btn{
+  display:flex;align-items:center;gap:6px;
+  padding:6px 14px;border-radius:8px;
+  background:#F8F9FB;border:1.5px solid #E5E7EB;
+  font-family:'Poppins',sans-serif;font-size:.7rem;font-weight:700;
+  color:var(--mut);cursor:pointer;transition:all .2s;white-space:nowrap;
+}
+.hn-history-btn:hover{border-color:var(--r);color:var(--r);background:#FFF5F5}
+.hn-history-btn i{font-size:.75rem}
+#page-home .lang-toggle{background:rgba(0,0,0,.05);border:1px solid rgba(0,0,0,.08)}
+#page-home .lang-btn{color:#888}
+#page-home .lang-btn.active{background:var(--r);color:#fff}
+
+/* HOME BODY */
+.hbody{position:relative;z-index:5;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px 24px 12px;overflow:hidden}
+.hero-flag-accent{display:flex;align-items:center;gap:8px;margin-bottom:14px;animation:fadeUp .7s .1s both}
+.flag-stripe{height:3px;border-radius:2px}
+.flag-stripe.s1{background:#8B0000;width:28px}
+.flag-stripe.s2{background:#FF8C00;width:14px}
+.flag-stripe.s3{background:#008000;width:14px}
+.flag-dot{width:8px;height:8px;border-radius:50%;background:var(--r);animation:blink 1.8s ease-in-out infinite}
+.flag-label{font-size:.6rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--r);font-family:'Poppins',sans-serif}
+@keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.25;transform:scale(.65)}}
+.hl-main{font-family:'Poppins',sans-serif;font-weight:900;font-size:clamp(2.4rem,9vw,5.5rem);line-height:.88;letter-spacing:-2px;margin-bottom:10px;animation:fadeUp .7s .2s both}
+.hl-main .w-fuel{display:block;color:#111}
+.hl-main .w-pass{display:block;background:linear-gradient(135deg,var(--r) 0%,#FF4444 50%,#C00 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hl-main.si-mode{font-size:clamp(1.6rem,6vw,3.2rem);letter-spacing:-1px;line-height:1.15;font-family:'Noto Sans Sinhala',sans-serif;font-weight:700}
+.hl-line{display:flex;align-items:center;gap:14px;margin:4px auto 14px;max-width:300px;width:100%;animation:fadeUp .7s .3s both}
+.hl-line::before,.hl-line::after{content:'';flex:1;height:1px;background:rgba(0,0,0,.1)}
+.hl-line-text{font-size:.58rem;letter-spacing:2.5px;text-transform:uppercase;color:#999;white-space:nowrap;font-weight:700;font-family:'Poppins',sans-serif}
+.hdesc{font-size:clamp(.8rem,2vw,.9rem);color:#6B7280;line-height:1.7;max-width:360px;margin:0 auto 22px;animation:fadeUp .7s .4s both}
+.hdesc.si-mode{font-family:'Noto Sans Sinhala',sans-serif;font-size:.82rem}
+.cta-group{display:flex;flex-direction:column;align-items:center;gap:10px;animation:fadeUp .7s .5s both}
+.cta-main{display:inline-flex;align-items:center;gap:11px;background:var(--r);color:#fff;border:none;border-radius:14px;padding:15px 34px;font-family:'Poppins',sans-serif;font-size:.9rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .25s;box-shadow:0 4px 24px rgba(212,32,32,.3);position:relative;overflow:hidden}
+.cta-main::before{content:'';position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.18) 50%,transparent 70%);transform:translateX(-100%);transition:transform .6s}
+.cta-main:hover::before{transform:translateX(100%)}
+.cta-main:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(212,32,32,.4),0 0 0 5px rgba(212,32,32,.08)}
+.cta-main:active{transform:scale(.97)}
+.cta-main.si-mode{font-family:'Noto Sans Sinhala',sans-serif;font-size:.88rem;letter-spacing:.5px}
+.cta-icon-wrap{width:30px;height:30px;background:rgba(255,255,255,.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
+.cta-arr{font-size:.9rem;transition:transform .2s}
+.cta-main:hover .cta-arr{transform:translateX(5px)}
+
+/* FEATURE BAR */
+.hstats{position:relative;z-index:5;display:flex;flex-wrap:nowrap;justify-content:center;border-top:1px solid rgba(0,0,0,.06);background:#FAFAFA;flex-shrink:0}
+.hstat{flex:1;min-width:0;max-width:160px;display:flex;flex-direction:column;align-items:center;padding:11px 8px;gap:3px;border-right:1px solid rgba(0,0,0,.06);animation:fadeUp .7s calc(.6s + var(--i)*.08s) both}
+.hstat:last-child{border-right:none}
+.hstat-num{font-size:1rem;color:var(--r)}
+.hstat-lbl{font-size:.52rem;letter-spacing:.6px;text-transform:uppercase;color:#9CA3AF;font-weight:700;line-height:1.3;text-align:center;font-family:'Poppins',sans-serif}
+.hstat-lbl.si-mode{font-family:'Noto Sans Sinhala',sans-serif;letter-spacing:0;font-size:.52rem;text-transform:none}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/*══════════ TOP BAR (form + result) ══════════*/
+.top-bar{width:100%;background:#fff;padding:11px 18px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;border-bottom:1px solid #EAEDF2;box-shadow:0 1px 10px rgba(0,0,0,.05)}
+.tb-logo{font-family:'Poppins',sans-serif;font-size:1rem;letter-spacing:2px;color:#111;font-weight:800}
+.tb-logo span{color:var(--r)}
+.tb-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.session-pill{display:none;align-items:center;gap:6px;background:#F0FFF6;border:1.5px solid #A8E6C0;border-radius:40px;padding:5px 12px 5px 7px;cursor:pointer;transition:all .2s;max-width:220px}
+.session-pill:hover{background:#E0FAF0;transform:translateY(-1px);box-shadow:0 4px 12px rgba(46,158,91,.15)}
+.sp-dot{width:7px;height:7px;border-radius:50%;background:#2e9e5b;flex-shrink:0;animation:blink2 1.5s ease-in-out infinite}
+@keyframes blink2{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.25;transform:scale(.65)}}
+.sp-text{display:flex;flex-direction:column;gap:0}
+.sp-title{font-size:.6rem;font-weight:700;color:#166534;font-family:'Poppins',sans-serif;line-height:1.2}
+.sp-sub{font-size:.55rem;color:#22a05a;font-family:'Poppins',sans-serif;line-height:1.2}
+.tb-back{font-size:.65rem;letter-spacing:.5px;text-transform:uppercase;color:#888;cursor:pointer;border:none;background:none;font-family:'Poppins',sans-serif;font-weight:600;display:flex;align-items:center;gap:5px;transition:color .2s;white-space:nowrap}
+.tb-back:hover{color:var(--r)}
+.tb-back.si-mode{font-family:'Noto Sans Sinhala',sans-serif;font-size:.7rem;letter-spacing:0}
+.tb-hist-btn{display:flex;align-items:center;gap:5px;padding:5px 11px;border-radius:7px;background:#F1F3F7;border:1px solid #E2E6ED;font-family:'Poppins',sans-serif;font-size:.65rem;font-weight:700;color:var(--mut);cursor:pointer;transition:all .2s;white-space:nowrap}
+.tb-hist-btn:hover{border-color:var(--r);color:var(--r);background:#FFF5F5}
+.tb-hist-btn i{font-size:.7rem}
+
+/*══════════ FORM PAGE ══════════*/
+#page-form{background:#F8F9FB}
+.strip-red{width:100%;text-align:center;position:relative;overflow:hidden;padding:14px 24px 12px;flex-shrink:0}
+.strip-red.red{background:linear-gradient(135deg,var(--r2),var(--r) 60%,#E03030)}
+.strip-red.green{background:linear-gradient(135deg,#1A5C33,#2e9e5b)}
+.strip-red::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:28px 28px}
+.strip-inner{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:3px}
+.strip-title{font-family:'Poppins',sans-serif;font-size:clamp(1.1rem,4vw,1.5rem);color:#fff;letter-spacing:3px;font-weight:800}
+.strip-title.si-mode{font-family:'Noto Sans Sinhala',sans-serif;font-size:clamp(1rem,3.5vw,1.3rem);letter-spacing:0}
+.strip-sub{font-size:.62rem;color:rgba(255,255,255,.62);letter-spacing:1.2px;text-transform:uppercase}
+.strip-sub.si-mode{font-family:'Noto Sans Sinhala',sans-serif;letter-spacing:0}
+.step-track{display:flex;align-items:center;justify-content:center;padding:13px 24px 0;width:100%;max-width:440px;margin:0 auto;flex-shrink:0}
+.step-item{display:flex;flex-direction:column;align-items:center;gap:3px}
+.step-num{width:28px;height:28px;border-radius:50%;border:2px solid #E2E6ED;background:#fff;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:.85rem;font-weight:800;color:#ccc;transition:all .3s}
+.step-num.on{background:var(--r);border-color:var(--r);color:#fff}
+.step-num.ok{background:#2e9e5b;border-color:#2e9e5b;color:#fff}
+.step-txt{font-size:.54rem;letter-spacing:.9px;text-transform:uppercase;color:#bbb;font-weight:600}
+.step-txt.on{color:var(--r)}.step-txt.ok{color:#2e9e5b}
+.step-txt.si-mode{font-family:'Noto Sans Sinhala',sans-serif;font-size:.55rem;letter-spacing:0;text-transform:none}
+.step-bar{flex:1;height:2px;background:#E2E6ED;margin:0 8px 12px;max-width:60px;transition:background .3s}
+.step-bar.ok{background:#2e9e5b}
+.form-wrap{flex:1;overflow-y:auto;width:100%;max-width:440px;margin:0 auto;padding:13px 18px 10px;scrollbar-width:none}
+.form-wrap::-webkit-scrollbar{display:none}
+.form-sec{background:#fff;border-radius:14px;box-shadow:0 2px 14px rgba(0,0,0,.05),0 0 0 1px rgba(0,0,0,.03);padding:15px 15px 18px;margin-bottom:10px}
+.sec-title{font-family:'Poppins',sans-serif;font-size:.85rem;font-weight:800;letter-spacing:2px;color:var(--r);border-bottom:2px solid #FDE8E8;padding-bottom:7px;margin-bottom:14px}
+.sec-title.si-mode{font-family:'Noto Sans Sinhala',sans-serif;letter-spacing:0}
+.flabel{display:block;font-size:.64rem;font-weight:700;letter-spacing:.9px;text-transform:uppercase;color:#6B7280;margin-bottom:5px;margin-top:14px}
+.flabel:first-of-type{margin-top:0}
+.flabel.si-mode{font-family:'Noto Sans Sinhala',sans-serif;letter-spacing:0;font-size:.68rem;text-transform:none}
+input[type="number"]{width:100%;padding:10px 13px;border:1.5px solid var(--bdr);border-radius:9px;font-family:var(--fb);font-size:.95rem;color:#111;background:#FAFBFC;outline:none;-webkit-appearance:none;transition:border-color .2s,box-shadow .2s}
+input[type="number"]:focus{border-color:var(--r);background:#fff;box-shadow:0 0 0 3px rgba(212,32,32,.08)}
+.qr-zone{margin-top:5px;border:2px dashed #D1D5DB;border-radius:11px;padding:16px 14px;text-align:center;cursor:pointer;position:relative;background:#FAFBFC;transition:all .2s}
+.qr-zone:hover,.qr-zone:focus-within{border-color:var(--r);background:#FFF8F8}
+.qr-zone.has-file{border-color:#2e9e5b;background:#F0FFF6;border-style:solid}
+.qr-zone input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.qz-icon{font-size:1.7rem;margin-bottom:5px;display:block}
+.qz-text{font-size:.75rem;color:#6B7280;line-height:1.5}
+.qz-text strong{display:block;margin-bottom:2px;color:var(--r)}
+.qr-preview{display:none;justify-content:center;margin-top:8px}
+.qr-preview img{width:70px;height:70px;object-fit:contain;border:1.5px solid var(--bdr);border-radius:7px;background:#fff}
+.err-box{display:none;background:#FEF2F2;border:1px solid #FECACA;color:#B91C1C;border-radius:9px;padding:10px 14px;font-size:.74rem;font-weight:600;margin-top:10px}
+.trust-strip{width:100%;max-width:440px;margin:0 auto;padding:0 0 5px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:5px;font-size:.58rem;color:#9CA3AF;font-weight:600}
+.trust-item i{font-size:.62rem}
+.btn-red{width:100%;padding:12px;background:var(--r);color:#fff;border:none;border-radius:11px;font-family:'Poppins',sans-serif;font-size:.92rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;margin-top:12px;transition:all .2s;box-shadow:0 4px 16px rgba(212,32,32,.26)}
+.btn-red.si-mode{font-family:'Noto Sans Sinhala',sans-serif;font-size:.88rem;letter-spacing:.5px;text-transform:none}
+.btn-red:hover{background:var(--r2);transform:translateY(-1px);box-shadow:0 6px 20px rgba(212,32,32,.38)}
+.btn-red:active{transform:scale(.98)}
+.btn-ghost{width:100%;padding:11px;background:transparent;color:var(--r);border:2px solid var(--r);border-radius:11px;font-family:'Poppins',sans-serif;font-size:.88rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;margin-top:8px;transition:all .2s}
+.btn-ghost.si-mode{font-family:'Noto Sans Sinhala',sans-serif;font-size:.85rem;letter-spacing:.5px;text-transform:none}
+.btn-ghost:hover{background:var(--r);color:#fff}
+.btn-soft{width:100%;padding:9px;background:transparent;color:#9CA3AF;border:1.5px solid var(--bdr);border-radius:11px;font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.5px;cursor:pointer;margin-top:6px;transition:all .2s}
+.btn-soft.si-mode{font-family:'Noto Sans Sinhala',sans-serif;font-size:.74rem;letter-spacing:0;text-transform:none}
+.btn-soft:hover{color:var(--r);border-color:var(--r)}
+.foot-credit{text-align:center;padding:9px 16px 3px;font-size:.6rem;color:#9CA3AF;line-height:1.7}
+.foot-credit strong{color:#374151;font-weight:700}
+.foot-credit a{color:var(--r);text-decoration:none;font-weight:700}
+.heart{color:#E03}
+
+/*══════════ RESULT PAGE ══════════*/
+#page-result{background:#F8F9FB}
+.result-wrap{flex:1;overflow-y:auto;width:100%;max-width:360px;margin:0 auto;padding:13px 18px 10px;display:flex;flex-direction:column;align-items:center;scrollbar-width:none}
+.result-wrap::-webkit-scrollbar{display:none}
+#fuel-pass-card{width:100%;max-width:300px;background:#fff;border-radius:13px;overflow:hidden;box-shadow:0 6px 32px rgba(0,0,0,.11),0 0 0 1px rgba(0,0,0,.04);flex-shrink:0}
+.card-hdr{background:var(--r);padding:10px 14px 7px;text-align:center}
+.card-t1{font-family:'Poppins',sans-serif;font-size:clamp(.95rem,3.5vw,1.15rem);font-weight:800;letter-spacing:2px;color:#fff;text-transform:uppercase;line-height:1.1}
+.card-t2{font-size:.55rem;font-weight:600;letter-spacing:2.5px;color:rgba(255,255,255,.72);text-transform:uppercase;margin-top:2px}
+.card-min{display:flex;align-items:center;gap:9px;padding:7px 12px 6px;border-bottom:1px solid #F0F2F5;background:#fff}
+.card-emb{width:26px;height:auto;flex-shrink:0;object-fit:contain}
+.card-min-img{height:22px;width:auto;object-fit:contain;flex:1;min-width:0}
+.card-qr-area{padding:16px 22px;display:flex;justify-content:center;align-items:center;background:#FAFBFC;border-top:1px solid #F0F2F5;border-bottom:1px solid #F0F2F5;min-height:165px}
+.card-qr-area img{width:min(155px,52vw);max-width:155px;max-height:155px;object-fit:contain}
+.card-quota{background:var(--r);color:#fff;padding:7px 12px;display:flex;justify-content:space-between;align-items:center}
+.ql{font-size:.55rem;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;opacity:.82}
+.qv{font-family:'Poppins',sans-serif;font-size:1rem;font-weight:800;letter-spacing:1px}
+.card-foot{background:#fff;padding:6px 12px 9px}
+.stn-lbl{font-size:.5rem;letter-spacing:1.2px;text-transform:uppercase;color:#D1D5DB;text-align:center;margin-bottom:5px}
+.stn-logos{display:flex;justify-content:center;align-items:center;gap:8px}
+.stn-logos img{width:28px;height:28px;object-fit:contain;flex-shrink:0}
+.cred-row{display:flex;justify-content:center;align-items:center;gap:10px;padding:4px 12px 2px;border-top:1px solid #F3F4F6;margin-top:5px}
+.cred-img{height:12px;width:auto;object-fit:contain;opacity:.7}
+.card-serial{text-align:center;font-size:.48rem;color:#D1D5DB;letter-spacing:2px;margin-top:5px;font-family:monospace}
+.res-actions{width:100%;max-width:300px;margin-top:11px;display:flex;flex-direction:column;gap:7px;flex-shrink:0}
+.res-actions .btn-red,.res-actions .btn-ghost,.res-actions .btn-soft{margin-top:0}
+
+/*══════════ HISTORY PAGE ══════════*/
+#page-history{background:#F8F9FB}
+.hist-wrap{flex:1;overflow-y:auto;width:100%;max-width:480px;margin:0 auto;padding:16px 18px 12px;scrollbar-width:none}
+.hist-wrap::-webkit-scrollbar{display:none}
+.hist-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:12px;color:#9CA3AF;text-align:center;padding:40px 24px}
+.hist-empty i{font-size:2.5rem;color:#E5E7EB}
+.hist-empty p{font-size:.82rem;line-height:1.6}
+.hist-empty strong{display:block;font-size:.95rem;color:#6B7280;margin-bottom:4px;font-family:'Poppins',sans-serif;font-weight:700}
+.hist-card{
+  background:#fff;border-radius:12px;
+  box-shadow:0 2px 12px rgba(0,0,0,.05),0 0 0 1px rgba(0,0,0,.04);
+  padding:14px 16px;margin-bottom:10px;
+  display:flex;align-items:center;gap:14px;
+  transition:box-shadow .2s,transform .2s;cursor:pointer;
+}
+.hist-card:hover{box-shadow:0 6px 22px rgba(0,0,0,.09),0 0 0 1px rgba(212,32,32,.1);transform:translateY(-1px)}
+.hist-qr-thumb{
+  width:56px;height:56px;border-radius:8px;
+  object-fit:contain;background:#F8F9FB;
+  border:1px solid #E5E7EB;flex-shrink:0;
+}
+.hist-info{flex:1;min-width:0}
+.hist-serial{font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:700;color:#111;letter-spacing:.5px}
+.hist-quota{font-size:.7rem;color:var(--r);font-weight:600;margin-top:2px}
+.hist-date{font-size:.62rem;color:#9CA3AF;margin-top:3px}
+.hist-actions{display:flex;flex-direction:column;gap:5px;flex-shrink:0}
+.hist-view-btn,.hist-del-btn{
+  padding:5px 12px;border-radius:7px;font-family:'Poppins',sans-serif;
+  font-size:.62rem;font-weight:700;cursor:pointer;border:none;
+  display:flex;align-items:center;gap:4px;transition:all .2s;white-space:nowrap;
+}
+.hist-view-btn{background:var(--r);color:#fff}
+.hist-view-btn:hover{background:var(--r2)}
+.hist-del-btn{background:#F1F3F7;color:#9CA3AF;border:1px solid #E5E7EB}
+.hist-del-btn:hover{background:#FEF2F2;color:#B91C1C;border-color:#FECACA}
+.hist-clear-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding:0 2px}
+.hist-count{font-size:.72rem;color:#9CA3AF;font-weight:600}
+.hist-clear-all{font-size:.68rem;color:#9CA3AF;background:none;border:none;cursor:pointer;font-family:'Poppins',sans-serif;font-weight:600;display:flex;align-items:center;gap:4px;transition:color .2s}
+.hist-clear-all:hover{color:#B91C1C}
+.hist-section-title{font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:800;color:var(--r);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.hist-section-title i{font-size:.82rem}
+
+/*══════════ RESPONSIVE ══════════*/
+@media(max-width:420px){
+  .hl-main{font-size:2.5rem}
+  .hn{padding:12px 16px}
+  .hstat{padding:10px 6px}
+  .tb-right{gap:5px}
+  .session-pill{max-width:150px}
+  .sp-sub{display:none}
+  .card-qr-area{min-height:140px}
+  .hn-history-btn span{display:none}
+}
+@media(min-width:768px){
+  .hbody{padding:24px 40px 16px}
+  .hl-main{font-size:min(6.5rem,11vw)}
+}
+</style>
+</head>
+<body>
+
+<!--═══════════ PAGE 0 · HOME ═══════════-->
+<div class="page active" id="page-home">
+  <div class="hbg">
+    <div class="mesh m1"></div>
+    <div class="mesh m2"></div>
+    <div class="hgrid"></div>
+    <div class="slash"></div>
+  </div>
+
+  <nav class="hn">
+    <div class="hn-logo">
+      <div class="hn-logo-emblem">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Emblem_of_Sri_Lanka.svg/125px-Emblem_of_Sri_Lanka.svg.png"
+          alt="Sri Lanka Emblem" onerror="this.style.display='none';this.nextSibling.style.display='block'"/>
+        <span style="display:none;font-size:.9rem">🦁</span>
+      </div>
+      <div class="hn-logo-text">FUEL<span>PASS</span></div>
+    </div>
+    <div class="hn-nav-right">
+      <button class="hn-history-btn" onclick="showPage('history')">
+        <i class="fa-solid fa-clock-rotate-left"></i>
+        <span id="t-hist-nav">History</span>
+      </button>
+      <a class="hn-history-btn" href="docs.html" target="_blank" rel="noopener" style="text-decoration:none">
+        <i class="fa-solid fa-book-open"></i>
+        <span>Guide</span>
+      </a>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" data-lang="si" onclick="setLang('si')">සිං</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hbody">
+    <div class="hero-flag-accent">
+      <div class="flag-stripe s1"></div>
+      <div class="flag-stripe s2"></div>
+      <div class="flag-stripe s3"></div>
+      <div class="flag-dot"></div>
+      <span class="flag-label">Sri Lanka</span>
+    </div>
+
+    <h1 class="hl-main" id="t-title">
+      <span class="w-fuel">NATIONAL</span>
+      <span class="w-pass">FUEL PASS</span>
+    </h1>
+
+    <div class="hl-line">
+      <div class="hl-line-text" id="t-sub">Sri Lanka · QR Based Quota</div>
+    </div>
+
+    <p class="hdesc" id="t-desc">
+      Generate your official digital fuel quota pass instantly. Upload your QR, set your quota, and carry your pass anywhere on your phone.
+    </p>
+
+    <div class="cta-group">
+      <button class="cta-main" onclick="startNew()" id="t-cta">
+        <span class="cta-icon-wrap"><i class="fa-solid fa-bolt"></i></span>
+        <span id="t-cta-text">Build Your Own Card</span>
+        <span class="cta-arr"><i class="fa-solid fa-arrow-right"></i></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="hstats">
+    <div class="hstat" style="--i:0">
+      <div class="hstat-num"><i class="fa-solid fa-bolt"></i></div>
+      <div class="hstat-lbl" id="f1">Instant<br>Generation</div>
+    </div>
+    <div class="hstat" style="--i:1">
+      <div class="hstat-num"><i class="fa-solid fa-qrcode"></i></div>
+      <div class="hstat-lbl" id="f2">QR Code<br>Ready</div>
+    </div>
+    <div class="hstat" style="--i:2">
+      <div class="hstat-num"><i class="fa-solid fa-shield-halved"></i></div>
+      <div class="hstat-lbl" id="f3">Private &amp;<br>Secure</div>
+    </div>
+    <div class="hstat" style="--i:3">
+      <div class="hstat-num"><i class="fa-solid fa-download"></i></div>
+      <div class="hstat-lbl" id="f4">Free<br>Download</div>
+    </div>
+  </div>
+</div>
+
+
+<!--═══════════ PAGE 1 · FORM ═══════════-->
+<div class="page" id="page-form">
+  <div class="top-bar">
+    <div class="tb-logo">FUEL<span>PASS</span></div>
+    <div class="tb-right">
+      <div class="session-pill" id="session-pill-form" onclick="resumeFromPill()">
+        <span class="sp-dot"></span>
+        <div class="sp-text">
+          <span class="sp-title" id="t-sp-title">Session Saved</span>
+          <span class="sp-sub" id="t-sp-sub">Tap to view →</span>
+        </div>
+      </div>
+      <button class="tb-hist-btn" onclick="showPage('history')">
+        <i class="fa-solid fa-clock-rotate-left"></i>
+        <span id="t-hist-form">History</span>
+      </button>
+      <a class="tb-hist-btn" href="docs.html" target="_blank" rel="noopener" style="text-decoration:none">
+        <i class="fa-solid fa-book-open"></i>
+        <span>Guide</span>
+      </a>
+        <i class="fa-solid fa-house"></i> <span id="t-home-lbl">Home</span>
+      </button>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" data-lang="si" onclick="setLang('si')">සිං</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="strip-red red">
+    <div class="strip-inner">
+      <div class="strip-title" id="t-form-title">PASS DETAILS</div>
+      <div class="strip-sub" id="t-form-sub">Fill in your fuel quota information</div>
+    </div>
+  </div>
+
+  <div class="step-track">
+    <div class="step-item">
+      <div class="step-num on">1</div>
+      <span class="step-txt on" id="t-step1">Details</span>
+    </div>
+    <div class="step-bar"></div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <span class="step-txt" id="t-step2">Your Pass</span>
+    </div>
+  </div>
+
+  <div class="form-wrap">
+    <div class="form-sec">
+      <div class="sec-title" id="t-sec-title">QUOTA INFO</div>
+      <label class="flabel" id="t-quota-lbl">Weekly Quota (Litres)</label>
+      <input type="number" id="inp-quota" min="1" max="500" placeholder="e.g. 20" inputmode="numeric"/>
+      <label class="flabel" id="t-qr-lbl" style="margin-top:14px">Upload QR Code Image</label>
+      <div class="qr-zone" id="qr-drop">
+        <input type="file" id="qr-file-input" accept="image/*"/>
+        <span class="qz-icon">📷</span>
+        <div class="qz-text">
+          <strong id="qz-title">Tap to upload your QR code</strong>
+          <span id="t-drag">or drag &amp; drop here</span>
+        </div>
+        <div class="qr-preview" id="qr-preview">
+          <img id="qr-thumb" alt="QR Preview"/>
+        </div>
+      </div>
+      <div class="err-box" id="error-msg">⚠️ <span id="t-err">Please enter your weekly quota and upload a QR image.</span></div>
+    </div>
+
+    <button class="btn-red" onclick="goToResult()" id="t-gen-btn">
+      <i class="fa-solid fa-id-card"></i> Generate Pass
+    </button>
+
+    <div class="trust-strip">
+      <div class="trust-item">
+        <i class="fa-solid fa-hammer" style="color:#D42020"></i>
+        <span id="t-trust1">Build your own card</span>
+      </div>
+      <div class="trust-item">
+        <i class="fa-solid fa-lock" style="color:#6B7280"></i>
+        <span id="t-trust2">Data stays on your device</span>
+      </div>
+      <div class="trust-item">
+        <i class="fa-solid fa-circle-check" style="color:#10B981"></i>
+        <span id="t-trust3">Free &amp; no registration</span>
+      </div>
+    </div>
+
+    <button class="btn-ghost" onclick="showPage('home')" id="t-back-btn">← Back to Home</button>
+    <button class="btn-soft" id="reset-btn-form" onclick="resetAll()" style="display:none">
+      <i class="fa-solid fa-rotate-left"></i> <span id="t-reset-f-txt">Reset &amp; Start Over</span>
+    </button>
+
+    <div class="foot-credit">
+      Made with <span class="heart">💗</span> by <a href="https://infiax.com" target="_blank" rel="noopener">Infiax Pvt Ltd</a>
+      — Your data is never sent to our servers.
+    </div>
+  </div>
+</div>
+
+
+<!--═══════════ PAGE 2 · RESULT ═══════════-->
+<div class="page" id="page-result">
+  <div class="top-bar">
+    <div class="tb-logo">FUEL<span>PASS</span></div>
+    <div class="tb-right">
+      <button class="tb-hist-btn" onclick="showPage('history')">
+        <i class="fa-solid fa-clock-rotate-left"></i>
+        <span id="t-hist-res">History</span>
+      </button>
+      <button class="tb-back" id="t-edit-top" onclick="showPage('form')">
+        <i class="fa-solid fa-pen"></i> <span id="t-edit-lbl">Edit</span>
+      </button>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" data-lang="si" onclick="setLang('si')">සිං</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="strip-red green">
+    <div class="strip-inner">
+      <div style="font-size:1.1rem">✓</div>
+      <div class="strip-title" id="t-ready-title">PASS READY</div>
+      <div class="strip-sub" id="t-ready-sub">Show this at any authorized fuel station</div>
+    </div>
+  </div>
+
+  <div class="result-wrap">
+    <div id="fuel-pass-card">
+      <div class="card-hdr">
+        <div class="card-t1">National Fuel Pass</div>
+        <div class="card-t2">QR Based Fuel Quota</div>
+      </div>
+      <div class="card-min">
+        <img class="card-emb"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Emblem_of_Sri_Lanka.svg/125px-Emblem_of_Sri_Lanka.svg.png"
+          alt="Emblem" onerror="this.style.display='none'"/>
+        <img class="card-min-img" src="https://i.imgur.com/8xwykeR.png"
+          alt="Ministry of Power &amp; Renewable Energy" crossorigin="anonymous"/>
+      </div>
+      <div class="card-qr-area">
+        <img id="card-qr-img" src="" alt="QR Code"/>
+      </div>
+      <div class="card-quota">
+        <span class="ql" id="t-card-quota-lbl">Weekly Quota</span>
+        <span class="qv" id="card-quota">— L</span>
+      </div>
+      <div class="card-foot">
+        <div class="stn-lbl" id="t-stn-lbl">Authorized Fuel Stations</div>
+        <div class="stn-logos">
+          <img src="https://i.imgur.com/Nffj92m.png" alt="Lanka IOC" crossorigin="anonymous"/>
+          <img src="https://i.imgur.com/TWOh9HV.png" alt="Shell" crossorigin="anonymous"/>
+        </div>
+        <div class="cred-row">
+          <img class="cred-img" src="https://i.imgur.com/Z80H5Ht.png" alt="Dialog" crossorigin="anonymous"/>
+          <img class="cred-img" src="https://i.imgur.com/Qaw41Az.png" alt="Millennium IT" crossorigin="anonymous"/>
+        </div>
+        <div class="card-serial" id="card-serial">PASS-SL-000000</div>
+      </div>
+    </div>
+
+    <div class="res-actions">
+      <button class="btn-red" onclick="downloadPass()" id="t-dl-btn">
+        <i class="fa-solid fa-download"></i> Download Pass
+      </button>
+      <button class="btn-ghost" onclick="showPage('form')" id="t-edit-btn">← Edit Details</button>
+      <button class="btn-soft" onclick="resetAll()" id="t-reset-r">
+        <i class="fa-solid fa-rotate-left"></i> Reset &amp; Create New Pass
+      </button>
+    </div>
+
+    <div class="foot-credit">
+      Made with <span class="heart">💗</span> by <strong>Infiax Pvt Ltd</strong><br/>
+      Just upload &amp; download — no data sent to servers.
+    </div>
+  </div>
+</div>
+
+
+<!--═══════════ PAGE 3 · HISTORY ═══════════-->
+<div class="page" id="page-history">
+  <div class="top-bar">
+    <div class="tb-logo">FUEL<span>PASS</span></div>
+    <div class="tb-right">
+      <button class="tb-back" onclick="showPage('home')">
+        <i class="fa-solid fa-house"></i> <span>Home</span>
+      </button>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" data-lang="si" onclick="setLang('si')">සිං</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="strip-red" style="background:linear-gradient(135deg,#1e3a5f,#2563EB);padding:14px 24px 12px">
+    <div class="strip-inner">
+      <div style="font-size:1.1rem">🕐</div>
+      <div class="strip-title" id="t-hist-title" style="letter-spacing:2px">HISTORY</div>
+      <div class="strip-sub" id="t-hist-sub">Your previous generated passes</div>
+    </div>
+  </div>
+
+  <div class="hist-wrap" id="hist-wrap">
+    <!-- Populated by JS -->
+  </div>
+</div>
+
+
+<script>
+/*══════ TRANSLATIONS ══════*/
+var T={
+en:{
+  ctaText:'Build Your Own Card',ctaCls:'',
+  sub:'Sri Lanka · QR Based Quota',subCls:'',
+  desc:'Generate your official digital fuel quota pass instantly. Upload your QR, set your quota, and carry your pass anywhere on your phone.',descCls:'',
+  histNav:'History',histForm:'History',histRes:'History',
+  f1:'Instant<br>Generation',f2:'QR Code<br>Ready',f3:'Private &amp;<br>Secure',f4:'Free<br>Download',featCls:'',
+  homeLbl:'Home',
+  formTitle:'PASS DETAILS',formTitleCls:'',
+  formSub:'Fill in your fuel quota information',formSubCls:'',
+  step1:'Details',step2:'Your Pass',stepCls:'',
+  secTitle:'QUOTA INFO',secTitleCls:'',
+  quotaLbl:'Weekly Quota (Litres)',quotaLblCls:'',
+  qrLbl:'Upload QR Code Image',qrLblCls:'',
+  qzTitle:'Tap to upload your QR code',
+  drag:'or drag &amp; drop here',
+  err:'Please enter your weekly quota and upload a QR image.',
+  genBtn:'Generate Pass',genBtnCls:'',
+  backBtn:'← Back to Home',backBtnCls:'',
+  resetF:'Reset &amp; Start Over',resetFCls:'',
+  trust1:'Build your own card',trust2:'Data stays on your device',trust3:'Free &amp; no registration',
+  spTitle:'Session Saved',spSub:'Tap to view →',
+  editLbl:'Edit',
+  readyTitle:'PASS READY',readyTitleCls:'',
+  readySub:'Show this at any authorized fuel station',readySubCls:'',
+  cardQuotaLbl:'Weekly Quota',stnLbl:'Authorized Fuel Stations',
+  dlBtn:'Download Pass',dlBtnCls:'',
+  editBtn:'← Edit Details',editBtnCls:'',
+  resetR:'Reset &amp; Create New Pass',resetRCls:'',
+  histTitle:'HISTORY',histSub:'Your previous generated passes',
+},
+si:{
+  ctaText:'ඔබේ කාඩ්පත සාදන්න',ctaCls:'si-mode',
+  sub:'ශ්‍රී ලංකා · QR පදනම් කෝටාව',subCls:'si-mode',
+  desc:'ඔබේ නිල ඩිජිටල් ඉන්ධන කෝටා පාස් එකක් ක්ෂණිකව සාදාගන්න. ඔබේ QR කේතය උඩුගත කර, කෝටාව සකසා, ඔබේ දුරකථනයේ ගෙන යන්න.',descCls:'si-mode',
+  histNav:'ඉතිහාසය',histForm:'ඉතිහාසය',histRes:'ඉතිහාසය',
+  f1:'ක්ෂණිකව<br>සෑදීම',f2:'QR කේතය<br>සූදානම්',f3:'පෞද්ගලික &amp;<br>ආරක්ෂිත',f4:'නොමිලේ<br>බාගත කරන්න',featCls:'si-mode',
+  homeLbl:'මුල් පිටුව',
+  formTitle:'පාස් විස්තර',formTitleCls:'si-mode',
+  formSub:'ඔබේ ඉන්ධන කෝටා තොරතුරු පුරවන්න',formSubCls:'si-mode',
+  step1:'විස්තර',step2:'ඔබේ පාස්',stepCls:'si-mode',
+  secTitle:'කෝටා තොරතුරු',secTitleCls:'si-mode',
+  quotaLbl:'සතිපතා කෝටාව (ලීටර්)',quotaLblCls:'si-mode',
+  qrLbl:'QR කේත රූපය උඩුගත කරන්න',qrLblCls:'si-mode',
+  qzTitle:'ඔබේ QR කේතය ස්පර්ශ කර උඩුගත කරන්න',
+  drag:'හෝ මෙහි ඇද දමන්න',
+  err:'කරුණාකර ඔබේ සතිපතා කෝටාව ඇතුළු කර QR රූපය උඩුගත කරන්න.',
+  genBtn:'පාස් සාදන්න',genBtnCls:'si-mode',
+  backBtn:'← මුල් පිටුවට',backBtnCls:'si-mode',
+  resetF:'යළි ආරම්භ කරන්න',resetFCls:'si-mode',
+  trust1:'ඔබේ කාඩ්පත සාදා ගන්න',trust2:'දත්ත ඔබේ උපකරණයේ රැඳේ',trust3:'නොමිලේ · ලියාපදිංචියක් නැත',
+  spTitle:'සේෂන් සේව් කළා',spSub:'ස්පර්ශ කරන්න →',
+  editLbl:'සංස්කරණය',
+  readyTitle:'පාස් සූදානම්',readyTitleCls:'si-mode',
+  readySub:'ඕනෑම නිලධාරී ඉන්ධන පිරවුම් හල්හිදී මෙය පෙන්වන්න',readySubCls:'si-mode',
+  cardQuotaLbl:'සතිපතා කෝටාව',stnLbl:'නිලධාරී ඉන්ධන පිරවුම් හල්',
+  dlBtn:'පාස් බාගන්න',dlBtnCls:'si-mode',
+  editBtn:'← විස්තර සංස්කරණය',editBtnCls:'si-mode',
+  resetR:'නව පාස් සාදන්න',resetRCls:'si-mode',
+  histTitle:'ඉතිහාසය',histSub:'ඔබේ කලින් සෑදූ පාස්',
+}};
+
+var LANG='en';
+function setLang(l){
+  LANG=l;
+  document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l)});
+  applyLang();
+}
+function h(id,html,cls){
+  var el=document.getElementById(id);if(!el)return;
+  el.innerHTML=html;
+  if(cls!==undefined){el.className=el.className.replace(/\bsi-mode\b/g,'').trim();if(cls)el.classList.add(cls);}
+}
+function applyLang(){
+  var t=T[LANG];
+  var ttl=document.getElementById('t-title');
+  if(ttl){
+    ttl.querySelector('.w-fuel').textContent=LANG==='si'?'ජාතික':'NATIONAL';
+    ttl.querySelector('.w-pass').textContent=LANG==='si'?'ඉන්ධන පාස්':'FUEL PASS';
+    ttl.className='hl-main '+(t.titleCls||'');
+  }
+  var sub=document.getElementById('t-sub');if(sub){sub.innerHTML=t.sub;sub.className='hl-line-text '+(t.subCls||'');}
+  var desc=document.getElementById('t-desc');if(desc){desc.innerHTML=t.desc;desc.className='hdesc '+(t.descCls||'');}
+  h('t-cta-text',t.ctaText);
+  var ctaEl=document.getElementById('t-cta');if(ctaEl)ctaEl.className='cta-main '+(t.ctaCls||'');
+  h('t-hist-nav',t.histNav);h('t-hist-form',t.histForm);h('t-hist-res',t.histRes);
+  ['f1','f2','f3','f4'].forEach(function(id,i){
+    var el=document.getElementById(id);if(el){el.innerHTML=[t.f1,t.f2,t.f3,t.f4][i];el.className='hstat-lbl '+(t.featCls||'');}
+  });
+  h('t-sp-title',t.spTitle);h('t-sp-sub',t.spSub);
+  document.getElementById('t-back-home').innerHTML='<i class="fa-solid fa-house"></i> <span id="t-home-lbl">'+t.homeLbl+'</span>';
+  var ft=document.getElementById('t-form-title');if(ft){ft.innerHTML=t.formTitle;ft.className='strip-title '+(t.formTitleCls||'');}
+  var fs=document.getElementById('t-form-sub');if(fs){fs.innerHTML=t.formSub;fs.className='strip-sub '+(t.formSubCls||'');}
+  h('t-step1',t.step1);h('t-step2',t.step2);
+  document.querySelectorAll('.step-txt').forEach(function(el){el.className='step-txt '+(el.classList.contains('on')?'on ':el.classList.contains('ok')?'ok ':'' )+(t.stepCls||'');});
+  var sc=document.getElementById('t-sec-title');if(sc){sc.innerHTML=t.secTitle;sc.className='sec-title '+(t.secTitleCls||'');}
+  var ql=document.getElementById('t-quota-lbl');if(ql){ql.innerHTML=t.quotaLbl;ql.className='flabel '+(t.quotaLblCls||'');}
+  var qrl=document.getElementById('t-qr-lbl');if(qrl){qrl.innerHTML=t.qrLbl;qrl.className='flabel '+(t.qrLblCls||'');}
+  if(!document.getElementById('qr-drop').classList.contains('has-file'))document.getElementById('qz-title').textContent=t.qzTitle;
+  document.getElementById('t-drag').innerHTML=t.drag;
+  h('t-err',t.err);
+  var gb=document.getElementById('t-gen-btn');if(gb){gb.innerHTML='<i class="fa-solid fa-id-card"></i> '+t.genBtn;gb.className='btn-red '+(t.genBtnCls||'');}
+  var bb=document.getElementById('t-back-btn');if(bb){bb.innerHTML=t.backBtn;bb.className='btn-ghost '+(t.backBtnCls||'');}
+  var rf=document.getElementById('reset-btn-form');if(rf){document.getElementById('t-reset-f-txt').innerHTML=t.resetF;rf.className='btn-soft '+(t.resetFCls||'');}
+  h('t-trust1',t.trust1);h('t-trust2',t.trust2);h('t-trust3',t.trust3);
+  var et=document.getElementById('t-edit-top');if(et)et.innerHTML='<i class="fa-solid fa-pen"></i> <span>'+t.editLbl+'</span>';
+  var rt=document.getElementById('t-ready-title');if(rt){rt.innerHTML=t.readyTitle;rt.className='strip-title '+(t.readyTitleCls||'');}
+  var rs=document.getElementById('t-ready-sub');if(rs){rs.innerHTML=t.readySub;rs.className='strip-sub '+(t.readySubCls||'');}
+  h('t-card-quota-lbl',t.cardQuotaLbl);h('t-stn-lbl',t.stnLbl);
+  var db=document.getElementById('t-dl-btn');if(db){db.innerHTML='<i class="fa-solid fa-download"></i> '+t.dlBtn;db.className='btn-red '+(t.dlBtnCls||'');}
+  var eb=document.getElementById('t-edit-btn');if(eb){eb.innerHTML=t.editBtn;eb.className='btn-ghost '+(t.editBtnCls||'');}
+  var rr=document.getElementById('t-reset-r');if(rr){rr.innerHTML='<i class="fa-solid fa-rotate-left"></i> '+t.resetR;rr.className='btn-soft '+(t.resetRCls||'');}
+  var ht=document.getElementById('t-hist-title');if(ht){ht.innerHTML=t.histTitle;ht.className='strip-title';}
+  var hs=document.getElementById('t-hist-sub');if(hs)hs.innerHTML=t.histSub;
+}
+
+/*══════ STATE & STORAGE ══════*/
+var S={quota:'',qrData:null,serial:''};
+var STORE_KEY='nfp_v3';
+var HIST_KEY='nfp_history_v1';
+
+function getHistory(){try{return JSON.parse(localStorage.getItem(HIST_KEY)||'[]');}catch(e){return[];}}
+function saveHistory(arr){try{localStorage.setItem(HIST_KEY,JSON.stringify(arr));}catch(e){}}
+
+(function init(){
+  try{
+    var raw=localStorage.getItem(STORE_KEY);
+    if(raw){
+      var sv=JSON.parse(raw);
+      if(sv&&sv.qrData&&sv.quota){
+        S=sv;
+        document.getElementById('session-pill-form').style.display='flex';
+      }
+    }
+  }catch(e){}
+  document.getElementById('qr-file-input').addEventListener('change',function(e){readQR(e.target.files[0])});
+  var dz=document.getElementById('qr-drop');
+  dz.addEventListener('dragover',function(e){e.preventDefault();dz.style.borderColor='#D42020'});
+  dz.addEventListener('dragleave',function(){dz.style.borderColor=''});
+  dz.addEventListener('drop',function(e){e.preventDefault();dz.style.borderColor='';readQR(e.dataTransfer.files[0])});
+})();
+
+function showPage(name){
+  ['home','form','result','history'].forEach(function(n){
+    document.getElementById('page-'+n).classList.toggle('active',n===name);
+  });
+  if(name==='history')renderHistory();
+}
+function startNew(){
+  if(S.quota){document.getElementById('inp-quota').value=S.quota;document.getElementById('reset-btn-form').style.display='block';}
+  if(S.qrData){applyQRPreview(S.qrData);document.getElementById('reset-btn-form').style.display='block';}
+  showPage('form');
+}
+function resumeFromPill(){if(!S.qrData||!S.quota)return startNew();populateCard();showPage('result');}
+function readQR(file){
+  if(!file||!file.type.startsWith('image/'))return;
+  var r=new FileReader();
+  r.onload=function(ev){applyQRPreview(ev.target.result)};
+  r.readAsDataURL(file);
+}
+function applyQRPreview(dataUrl){
+  S.qrData=dataUrl;
+  document.getElementById('qr-thumb').src=dataUrl;
+  document.getElementById('qr-preview').style.display='flex';
+  document.getElementById('qz-title').textContent=LANG==='si'?'✅ QR රූපය සූදානම්':'✅ QR image ready';
+  document.querySelector('.qz-icon').style.display='none';
+  document.getElementById('qr-drop').classList.add('has-file');
+}
+function goToResult(){
+  var quota=document.getElementById('inp-quota').value.trim();
+  var err=document.getElementById('error-msg');
+  if(!quota||!S.qrData){err.style.display='block';err.scrollIntoView({behavior:'smooth',block:'nearest'});return;}
+  err.style.display='none';
+  S.quota=quota;
+  S.serial='PASS-SL-'+Math.floor(100000+Math.random()*900000);
+  S.date=new Date().toLocaleDateString('en-GB');
+  try{localStorage.setItem(STORE_KEY,JSON.stringify(S));}catch(e){}
+  /* save to history */
+  var hist=getHistory();
+  hist.unshift({quota:S.quota,serial:S.serial,date:S.date,qrData:S.qrData});
+  if(hist.length>10)hist=hist.slice(0,10);
+  saveHistory(hist);
+  populateCard();showPage('result');
+}
+function populateCard(){
+  document.getElementById('card-quota').textContent=S.quota+' L';
+  document.getElementById('card-qr-img').src=S.qrData;
+  document.getElementById('card-serial').textContent=S.serial||('PASS-SL-'+Math.floor(100000+Math.random()*900000));
+}
+function loadFromHistory(item){
+  S={quota:item.quota,qrData:item.qrData,serial:item.serial,date:item.date};
+  populateCard();showPage('result');
+}
+function resetAll(){
+  var msg=LANG==='si'?'ඔබේ සේව් කළ පාස් සමඟ නැවත සකස් කරන්නද?':'Reset and clear your saved pass?';
+  if(!confirm(msg))return;
+  try{localStorage.removeItem(STORE_KEY);}catch(e){}
+  S={quota:'',qrData:null,serial:''};
+  document.getElementById('inp-quota').value='';
+  document.getElementById('qr-thumb').src='';
+  document.getElementById('qr-preview').style.display='none';
+  document.getElementById('qz-title').textContent=LANG==='si'?'ඔබේ QR කේතය ස්පර්ශ කර උඩුගත කරන්න':'Tap to upload your QR code';
+  document.querySelector('.qz-icon').style.display='block';
+  document.getElementById('qr-drop').classList.remove('has-file');
+  document.getElementById('error-msg').style.display='none';
+  document.getElementById('reset-btn-form').style.display='none';
+  document.getElementById('session-pill-form').style.display='none';
+  showPage('home');
+}
+
+/*══════ HISTORY RENDERING ══════*/
+function renderHistory(){
+  var hist=getHistory();
+  var wrap=document.getElementById('hist-wrap');
+  if(!hist.length){
+    wrap.innerHTML='<div class="hist-empty"><i class="fa-regular fa-clock"></i><div><strong>'+(LANG==='si'?'ඉතිහාසයක් නැත':'No history yet')+'</strong><p>'+(LANG==='si'?'ඔබ සාදා ගන්නා ලද පාස් මෙහි දිස් වේ.':'Passes you generate will appear here. Up to 10 are saved automatically.')+'</p></div></div>';
+    return;
+  }
+  var html='<div class="hist-clear-bar">'
+    +'<span class="hist-count">'+(LANG==='si'?hist.length+' පාස් සේව් කළා':hist.length+' pass'+(hist.length>1?'es':'')+' saved')+'</span>'
+    +'<button class="hist-clear-all" onclick="clearAllHistory()"><i class="fa-solid fa-trash-can"></i> '+(LANG==='si'?'සියල්ල ඉවත් කරන්න':'Clear all')+'</button>'
+    +'</div>';
+  hist.forEach(function(item,i){
+    html+='<div class="hist-card">'
+      +'<img class="hist-qr-thumb" src="'+item.qrData+'" alt="QR"/>'
+      +'<div class="hist-info">'
+      +'<div class="hist-serial">'+item.serial+'</div>'
+      +'<div class="hist-quota"><i class="fa-solid fa-gas-pump"></i> '+item.quota+' L / week</div>'
+      +'<div class="hist-date"><i class="fa-regular fa-calendar"></i> '+item.date+'</div>'
+      +'</div>'
+      +'<div class="hist-actions">'
+      +'<button class="hist-view-btn" onclick="loadFromHistory(getHistory()['+i+'])"><i class="fa-solid fa-eye"></i> '+(LANG==='si'?'බලන්න':'View')+'</button>'
+      +'<button class="hist-del-btn" onclick="deleteHistoryItem('+i+')"><i class="fa-solid fa-xmark"></i></button>'
+      +'</div>'
+      +'</div>';
+  });
+  wrap.innerHTML=html;
+}
+function deleteHistoryItem(i){
+  var hist=getHistory();hist.splice(i,1);saveHistory(hist);renderHistory();
+}
+function clearAllHistory(){
+  var msg=LANG==='si'?'ඉතිහාසය සියල්ල ඉවත් කරන්නද?':'Clear all history?';
+  if(!confirm(msg))return;
+  saveHistory([]);renderHistory();
+}
+
+/*══════ DOWNLOAD ══════*/
+function downloadPass(){
+  var card=document.getElementById('fuel-pass-card');
+  if(typeof html2canvas==='undefined'){
+    var s=document.createElement('script');
+    s.src='https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+    s.onload=function(){capture(card)};
+    document.head.appendChild(s);
+  }else capture(card);
+}
+function capture(card){
+  html2canvas(card,{scale:3,useCORS:true,backgroundColor:'#ffffff'}).then(function(c){
+    var a=document.createElement('a');
+    a.download='national-fuel-pass-'+S.serial+'.png';
+    a.href=c.toDataURL('image/png');
+    a.click();
+  });
+}
+</script>
+</body>
+</html>
