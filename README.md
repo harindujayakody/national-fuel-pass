@@ -87,7 +87,7 @@ This tool is **100% client-side**. That means:
 ## 🚀 Getting Started
 
 ### Option 1 — Open directly in browser
-Just open `fuel-pass-generator.html` in any modern browser. No server needed.
+Just open `index.html` in any modern browser. No server needed.
 
 ```bash
 # Clone the repo
@@ -95,9 +95,9 @@ git clone https://github.com/harindujayakody/national-fuel-pass.git
 cd national-fuel-pass
 
 # Open in browser
-open fuel-pass-generator.html
+open index.html
 # or on Windows:
-start fuel-pass-generator.html
+start index.html
 ```
 
 ### Option 2 — Deploy to any static host
@@ -115,7 +115,7 @@ No backend, no database, no server config needed.
 
 ```
 national-fuel-pass/
-├── fuel-pass-generator.html   # The entire app (single file)
+├── index.html   # The entire app (single file)
 ├── README.md                  # This file
 └── LICENSE                    # MIT License
 ```
@@ -156,7 +156,7 @@ national-fuel-pass/
 
 ## 🔧 Customization
 
-To customize the card branding, edit the relevant sections in `fuel-pass-generator.html`:
+To customize the card branding, edit the relevant sections in `index.html`:
 
 ```html
 <!-- Ministry logo image -->
