@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>How to Get Your Fuel Pass QR Code · Sri Lanka Guide</title>
-<meta name="description" content="Step-by-step guide to get or recover your Sri Lanka National Fuel Pass QR code from fuelpass.gov.lk. Register, login, and generate your card."/>
+<title>How to Create Digital Fuel Pass | Infiax Digital Fuel Pass</title>
+<meta name="description" content="How to Create Digital Fuel Pass | Infiax Digital Fuel Pass — Step-by-step guide to get or recover your Sri Lanka National Fuel Pass QR code from fuelpass.gov.lk. Register, login, and generate your card instantly."/>
 <meta name="author" content="Infiax Pvt Ltd"/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Noto+Sans+Sinhala:wght@400;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
@@ -20,23 +20,44 @@
 html{scroll-behavior:smooth}
 body{font-family:var(--fh);background:var(--bg);color:var(--txt);min-height:100vh}
 
-/* NAV */
-.nav{
-  background:#fff;border-bottom:1px solid var(--bdr);
-  padding:14px 24px;
-  display:flex;align-items:center;justify-content:space-between;
-  position:sticky;top:0;z-index:100;
-  box-shadow:0 1px 10px rgba(0,0,0,.05);
-}
-.nav-logo{font-family:var(--fh);font-weight:800;font-size:.95rem;letter-spacing:2px;color:#111;text-decoration:none;text-transform:uppercase}
-.nav-logo span{color:var(--r)}
-.nav-back{
-  display:inline-flex;align-items:center;gap:6px;
-  padding:7px 16px;border-radius:8px;background:var(--r);color:#fff;
-  font-size:.72rem;font-weight:700;letter-spacing:.5px;text-decoration:none;
-  transition:background .2s;text-transform:uppercase;
-}
-.nav-back:hover{background:var(--r2)}
+/* NAV — matches index.html unified navbar */
+.navbar{background:#fff;border-bottom:1px solid #E5E7EB;padding:0 16px;display:flex;align-items:center;justify-content:space-between;height:48px;position:sticky;top:0;z-index:200;box-shadow:0 1px 10px rgba(0,0,0,.05)}
+.nb-logo{display:flex;align-items:center;gap:7px;cursor:pointer;text-decoration:none;flex-shrink:0}
+.nb-logo-img{height:26px;width:auto;object-fit:contain;flex-shrink:0;display:block}
+.nb-logo-text{font-family:var(--fh);font-weight:800;font-size:.82rem;letter-spacing:2px;color:#111;text-transform:uppercase}
+.nb-logo-text span{color:var(--r)}
+.nb-right{display:flex;align-items:center;gap:1px;flex-shrink:0}
+.nb-item{display:flex;align-items:center;gap:4px;padding:5px 9px;border-radius:7px;font-family:var(--fh);font-size:.63rem;font-weight:700;cursor:pointer;border:none;background:transparent;color:#6B7280;transition:all .18s;white-space:nowrap;text-decoration:none;letter-spacing:.1px}
+.nb-item i{font-size:.66rem}
+.nb-item:hover{background:#F4F4F6;color:#111}
+.nb-item.active{background:#FFF1F1;color:var(--r)}
+.nb-divider{width:1px;height:18px;background:#E5E7EB;margin:0 3px;flex-shrink:0}
+.nb-lang{display:flex;align-items:center;gap:1px;background:#F1F3F7;border:1px solid #E2E6ED;border-radius:6px;padding:2px;margin-left:4px}
+.nb-lang-btn{padding:3px 8px;border-radius:4px;font-family:var(--fh);font-size:.6rem;font-weight:700;cursor:pointer;border:none;background:transparent;color:#999;transition:all .18s;line-height:1;white-space:nowrap}
+.nb-lang-btn.active{background:var(--r);color:#fff;box-shadow:0 1px 4px rgba(212,32,32,.35)}
+.nb-burger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:4px;width:32px;height:32px;border-radius:7px;background:transparent;border:1.5px solid #E5E7EB;cursor:pointer;transition:all .2s;flex-shrink:0}
+.nb-burger:hover{border-color:var(--r);background:#FFF1F1}
+.nb-burger span{display:block;width:14px;height:1.5px;background:#6B7280;border-radius:2px;transition:all .25s}
+.nb-burger.open span:nth-child(1){transform:translateY(5.5px) rotate(45deg);background:var(--r)}
+.nb-burger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.nb-burger.open span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg);background:var(--r)}
+.nb-burger:hover span{background:var(--r)}
+.nb-drawer{display:none;position:absolute;top:48px;left:0;right:0;background:#fff;border-bottom:1px solid #E5E7EB;box-shadow:0 8px 24px rgba(0,0,0,.1);z-index:199;flex-direction:column;padding:6px 10px 10px;gap:2px;animation:drawerIn .2s ease both}
+.nb-drawer.open{display:flex}
+@keyframes drawerIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.nb-drawer .nb-item{padding:9px 13px;border-radius:9px;font-size:.75rem;width:100%;justify-content:flex-start;gap:9px;border:1px solid transparent}
+.nb-drawer .nb-item:hover{background:#FFF1F1;color:var(--r);border-color:rgba(212,32,32,.1)}
+.nb-drawer .nb-item.active{background:#FFF1F1;color:var(--r);border-color:rgba(212,32,32,.14)}
+.nb-drawer .nb-item i{width:15px;text-align:center;font-size:.78rem}
+.nb-drawer-divider{height:1px;background:#F0F0F2;margin:4px 0}
+.nb-drawer-lang{display:flex;gap:5px;padding:7px 13px 2px}
+.nb-drawer-lang .nb-lang-btn{flex:1;padding:7px;text-align:center;border-radius:7px;font-size:.7rem;border:1.5px solid #E5E7EB;color:#888;transition:all .2s}
+.nb-drawer-lang .nb-lang-btn.active{background:var(--r);color:#fff;border-color:var(--r)}
+.nb-drawer-lang .nb-lang-btn:not(.active):hover{border-color:var(--r);color:var(--r)}
+.nb-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.22);z-index:198;backdrop-filter:blur(2px)}
+.nb-overlay.open{display:block}
+@media(max-width:600px){.nb-right{display:none}.nb-burger{display:flex}}
+@media(min-width:601px){.nb-drawer,.nb-overlay{display:none!important}}
 
 /* HERO */
 .hero{
@@ -62,15 +83,6 @@ body{font-family:var(--fh);background:var(--bg);color:var(--txt);min-height:100v
 }
 .hero p{font-size:.88rem;color:rgba(255,255,255,.75);line-height:1.7;max-width:460px;margin:0 auto 20px}
 
-/* Lang toggle */
-.hero-lang{display:flex;justify-content:center;gap:6px;margin-top:4px}
-.hlang-btn{
-  padding:6px 18px;border-radius:8px;border:1.5px solid rgba(255,255,255,.3);
-  background:transparent;color:rgba(255,255,255,.6);font-family:var(--fh);
-  font-size:.72rem;font-weight:700;cursor:pointer;transition:all .2s;
-}
-.hlang-btn.active,.hlang-btn:hover{background:rgba(255,255,255,.2);color:#fff;border-color:rgba(255,255,255,.6)}
-.hlang-btn.si{font-family:var(--fs);font-size:.78rem;letter-spacing:0}
 
 /* MAIN */
 .main{max-width:720px;margin:0 auto;padding:32px 20px 60px}
@@ -210,12 +222,42 @@ body{font-family:var(--fh);background:var(--bg);color:var(--txt);min-height:100v
 <body>
 
 <!-- NAV -->
-<nav class="nav">
-  <a class="nav-logo" href="index.html">FUEL<span>PASS</span></a>
-  <a class="nav-back" href="index.html">
-    <i class="fa-solid fa-arrow-left"></i> Back to Generator
+<nav class="navbar">
+  <a class="nb-logo" href="index.html">
+    <img class="nb-logo-img" src="assets/logo.png" alt="FuelPass Logo"/>
+    <div class="nb-logo-text">FUEL<span>PASS</span></div>
   </a>
+  <div class="nb-right">
+    <a class="nb-item" href="index.html">
+      <i class="fa-solid fa-house"></i><span>Home</span>
+    </a>
+    <a class="nb-item" href="index.html">
+      <i class="fa-solid fa-id-card"></i><span>New Pass</span>
+    </a>
+    <a class="nb-item active" href="docs.html">
+      <i class="fa-solid fa-book-open"></i><span>Guide</span>
+    </a>
+    <div class="nb-divider"></div>
+    <div class="nb-lang">
+      <button class="nb-lang-btn active" onclick="setDocLang('en')">EN</button>
+      <button class="nb-lang-btn" onclick="setDocLang('si')" style="font-family:'Noto Sans Sinhala',sans-serif">සිං</button>
+    </div>
+  </div>
+  <button class="nb-burger" id="doc-burger" onclick="toggleDocMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nb-drawer" id="doc-drawer">
+    <a class="nb-item" href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+    <a class="nb-item" href="index.html"><i class="fa-solid fa-id-card"></i>New Pass</a>
+    <a class="nb-item active" href="docs.html"><i class="fa-solid fa-book-open"></i>Guide</a>
+    <div class="nb-drawer-divider"></div>
+    <div class="nb-drawer-lang">
+      <button class="nb-lang-btn active" onclick="setDocLang('en');closeDocMenu()">EN</button>
+      <button class="nb-lang-btn" onclick="setDocLang('si');closeDocMenu()" style="font-family:'Noto Sans Sinhala',sans-serif">සිං</button>
+    </div>
+  </div>
 </nav>
+<div class="nb-overlay" id="doc-overlay" onclick="closeDocMenu()"></div>
 
 <!-- HERO -->
 <div class="hero">
@@ -225,10 +267,6 @@ body{font-family:var(--fh);background:var(--bg);color:var(--txt);min-height:100v
     </div>
     <h1>How to Get Your<br>Fuel Pass QR Code</h1>
     <p>Everything you need to know to register, login, and recover your official Sri Lanka National Fuel Pass QR code.</p>
-    <div class="hero-lang">
-      <button class="hlang-btn active" onclick="setDocLang('en')">English</button>
-      <button class="hlang-btn si" onclick="setDocLang('si')">සිංහල</button>
-    </div>
   </div>
 </div>
 
@@ -415,7 +453,15 @@ body{font-family:var(--fh);background:var(--bg);color:var(--txt);min-height:100v
 </div>
 
 <!-- PAGE FOOTER -->
-<div class="page-footer">
+<div class="page-footer" style="text-align:center;padding:16px;font-size:.65rem;color:#9CA3AF;line-height:1.9">
+  Made with <span style="color:#E03">💗</span> by <a href="https://infiax.com" target="_blank" rel="noopener" style="color:#D42020;font-weight:700;text-decoration:none">Infiax Pvt Ltd</a> ·
+  <a href="https://github.com/harindujayakody/national-fuel-pass" target="_blank" rel="noopener" style="color:#D42020;font-weight:700;text-decoration:none"><i class="fa-brands fa-github"></i> GitHub</a> ·
+  Your data is never sent to our servers.<br/>
+  <span style="display:inline-flex;align-items:center;gap:5px;background:#F8F5FF;border:1px solid #E5D8FF;border-radius:6px;padding:2px 8px;font-size:.58rem;color:#6B21A8;font-weight:700;letter-spacing:.3px;margin-top:3px">
+    <i class="fa-solid fa-wand-magic-sparkles"></i> Powered by Claude.ai
+  </span>
+</div>
+<div class="page-footer-old" style="display:none">
   Made with <span style="color:#E03">💗</span> by <a href="https://github.com/harindujayakody/national-fuel-pass" target="_blank" rel="noopener">Infiax Pvt Ltd</a> ·
   <a href="https://github.com/harindujayakody/national-fuel-pass" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a> ·
   Your data is never sent to our servers.
@@ -425,12 +471,28 @@ body{font-family:var(--fh);background:var(--bg);color:var(--txt);min-height:100v
 var docLang='en';
 function setDocLang(l){
   docLang=l;
-  document.querySelectorAll('.hlang-btn').forEach(function(b){b.classList.toggle('active',b.textContent.trim().startsWith(l==='en'?'En':'සි'))});
+  document.querySelectorAll('.nb-lang-btn').forEach(function(b){
+    var isEn=b.textContent.trim()==='EN';
+    b.classList.toggle('active',(l==='en'&&isEn)||(l==='si'&&!isEn));
+  });
   var isEn=l==='en';
   document.querySelectorAll('.en-txt').forEach(function(el){el.style.display=isEn?'':'none'});
   document.querySelectorAll('.si-txt').forEach(function(el){el.style.display=isEn?'none':''});
   document.getElementById('si-callout').classList.toggle('show',!isEn);
   document.getElementById('notice-en').style.display=isEn?'flex':'none';
+}
+function toggleDocMenu(){
+  var d=document.getElementById('doc-drawer');
+  var o=document.getElementById('doc-overlay');
+  var b=document.getElementById('doc-burger');
+  var isOpen=d.classList.contains('open');
+  if(isOpen){closeDocMenu();}
+  else{d.classList.add('open');o.classList.add('open');b.classList.add('open');}
+}
+function closeDocMenu(){
+  document.getElementById('doc-drawer').classList.remove('open');
+  document.getElementById('doc-overlay').classList.remove('open');
+  document.getElementById('doc-burger').classList.remove('open');
 }
 </script>
 </body>

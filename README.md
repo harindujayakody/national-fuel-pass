@@ -212,3 +212,11 @@ Built with 💗 by **[Infiax Pvt Ltd](https://infiax.com)** — a Sri Lankan sof
 - 🐛 **Bug reports:** [Open an issue](https://github.com/harindujayakody/national-fuel-pass/issues)
 - 💡 **Feature requests:** [Start a discussion](https://github.com/harindujayakody/national-fuel-pass/discussions)
 - 📧 **Contact:** hello@infiax.com
+
+---
+
+## ⚡ Powered By
+
+This project was built with the assistance of **[Claude.ai](https://claude.ai)** by Anthropic — an AI assistant used for design, coding, and content generation.
+
+> Built with 💗 by [Infiax Pvt Ltd](https://infiax.com) · Powered by [Claude.ai](https://claude.ai)
