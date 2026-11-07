@@ -7,7 +7,7 @@
 
 <!-- ═══ SEO META ═══ -->
 <title>Sri Lanka National Fuel Pass | Generate Digital Fuel Pass</title>
-<meta name="description" content="Sri Lanka National Fuel Pass | Generate Digital Fuel Pass instantly. Upload your QR code, set your weekly quota and download your official digital pass card — 100% free, no account needed, all data stays on your device."/>
+<meta name="description" content="Sri Lanka National Fuel Pass | Generate Digital Fuel Pass instantly. Upload your QR code, set your weekly quota and download your unofficial demo card — free, no account needed. This is NOT a government pass."/>
 <meta name="keywords" content="Sri Lanka National Fuel Pass, Generate Digital Fuel Pass, fuel quota QR, fuel pass generator, fuel pass card download, ඉන්ධන පාස්, fuel quota Sri Lanka"/>
 <meta name="author" content="Infiax Pvt Ltd"/>
 <meta name="robots" content="index, follow"/>
@@ -17,7 +17,7 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Sri Lanka National Fuel Pass | Generate Digital Fuel Pass"/>
-<meta property="og:description" content="Sri Lanka National Fuel Pass | Generate Digital Fuel Pass instantly. Free, private, no servers — your data stays on your device."/>
+<meta property="og:description" content="Sri Lanka National Fuel Pass | Build an unofficial demo fuel-quota card. Free, no servers — this is NOT a government pass."/>
 <meta property="og:url" content="https://fuelpass.infiax.com/"/>
 <meta property="og:image" content="assets/og-image.jpg"/>
 <meta property="og:locale" content="en_LK"/>
@@ -31,7 +31,7 @@
 
 <!-- Structured Data -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"Sri Lanka National Fuel Pass","description":"Sri Lanka National Fuel Pass | Generate Digital Fuel Pass instantly. Upload your QR code, set your weekly quota, download your official digital pass card — free, private, no server storage.","url":"https://fuelpass.infiax.com/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"LKR"},"creator":{"@type":"Organization","name":"Infiax Pvt Ltd"},"inLanguage":["en","si"]}
+{"@context":"https://schema.org","@type":"WebApplication","name":"Sri Lanka National Fuel Pass","description":"Sri Lanka National Fuel Pass | Build an unofficial demo fuel-quota card instantly. Upload your QR code, set your weekly quota — this is NOT a government pass and is not valid at fuel stations.","url":"https://fuelpass.infiax.com/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"LKR"},"creator":{"@type":"Organization","name":"Infiax Pvt Ltd"},"inLanguage":["en","si"]}
 </script>
 
 <!-- Fonts + Icons -->
@@ -304,6 +304,7 @@ input[type="number"]:focus{border-color:var(--r);background:#fff;box-shadow:0 0 
 .card-hdr{background:var(--r);padding:10px 14px 7px;text-align:center}
 .card-t1{font-family:'Poppins',sans-serif;font-size:clamp(.95rem,3.5vw,1.15rem);font-weight:800;letter-spacing:2px;color:#fff;text-transform:uppercase;line-height:1.1}
 .card-t2{font-size:.55rem;font-weight:600;letter-spacing:2.5px;color:rgba(255,255,255,.72);text-transform:uppercase;margin-top:2px}
+.card-unofficial{background:#111;color:#FFD60A;text-align:center;font-size:.58rem;font-weight:800;letter-spacing:1.5px;padding:6px 8px;text-transform:uppercase}
 .card-min{display:flex;align-items:center;gap:9px;padding:7px 12px 6px;border-bottom:1px solid #F0F2F5;background:#fff}
 .card-emb{width:26px;height:auto;flex-shrink:0;object-fit:contain}
 .card-min-img{height:22px;width:auto;object-fit:contain;flex:1;min-width:0}
@@ -445,7 +446,7 @@ input[type="number"]:focus{border-color:var(--r);background:#fff;box-shadow:0 0 
     </div>
 
     <p class="hdesc" id="t-desc">
-      Generate your official digital fuel quota pass instantly. Upload your QR, set your quota, and carry your pass anywhere on your phone.
+      Build an unofficial demo fuel-quota card. Upload your QR, set your quota — this is NOT a government pass and is not valid at fuel stations.
     </p>
 
     <div class="cta-group">
@@ -557,7 +558,7 @@ input[type="number"]:focus{border-color:var(--r);background:#fff;box-shadow:0 0 
           <img id="qr-thumb" alt="QR Preview"/>
         </div>
       </div>
-      <div class="err-box" id="error-msg">⚠️ <span id="t-err">Please enter your weekly quota and upload a QR image.</span></div>
+      <div class="err-box" id="error-msg">⚠️ <span id="t-err">Please enter a weekly quota between 1 and 500 litres and upload a QR image.</span></div>
     </div>
 
     <button class="btn-red" onclick="goToResult()" id="t-gen-btn">
@@ -571,7 +572,7 @@ input[type="number"]:focus{border-color:var(--r);background:#fff;box-shadow:0 0 
       </div>
       <div class="trust-item">
         <i class="fa-solid fa-lock" style="color:#6B7280"></i>
-        <span id="t-trust2">Data stays on your device</span>
+        <span id="t-trust2">Saved only in this browser</span>
       </div>
       <div class="trust-item">
         <i class="fa-solid fa-circle-check" style="color:#10B981"></i>
@@ -641,7 +642,7 @@ input[type="number"]:focus{border-color:var(--r);background:#fff;box-shadow:0 0 
     <div class="strip-inner">
       <div style="font-size:1.1rem">✓</div>
       <div class="strip-title" id="t-ready-title">PASS READY</div>
-      <div class="strip-sub" id="t-ready-sub">Show this at any authorized fuel station</div>
+      <div class="strip-sub" id="t-ready-sub">UNOFFICIAL demo only — not valid at fuel stations</div>
     </div>
   </div>
 
@@ -651,6 +652,7 @@ input[type="number"]:focus{border-color:var(--r);background:#fff;box-shadow:0 0 
         <div class="card-t1">National Fuel Pass</div>
         <div class="card-t2">QR Based Fuel Quota</div>
       </div>
+      <div class="card-unofficial">⚠ Unofficial — Demo Card · Not a Government Pass</div>
       <div class="card-min">
         <img class="card-emb"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Emblem_of_Sri_Lanka.svg/125px-Emblem_of_Sri_Lanka.svg.png"
@@ -660,6 +662,7 @@ input[type="number"]:focus{border-color:var(--r);background:#fff;box-shadow:0 0 
       </div>
       <div class="card-qr-area">
         <img id="card-qr-img" src="" alt="QR Code"/>
+        <div id="card-qr-missing" style="display:none;text-align:center;color:#9CA3AF;font-size:.75rem;line-height:1.5">QR image not stored.<br/>Re-upload your QR to show it here.</div>
       </div>
       <div class="card-quota">
         <span class="ql" id="t-card-quota-lbl">Weekly Quota</span>
@@ -675,7 +678,7 @@ input[type="number"]:focus{border-color:var(--r);background:#fff;box-shadow:0 0 
           <img class="cred-img" src="assets/dialog.png" alt="Dialog"/>
           <img class="cred-img" src="assets/mit.png" alt="Millennium IT"/>
         </div>
-        <div class="card-serial" id="card-serial">PASS-SL-000000</div>
+        <div class="card-serial" id="card-serial">DEMO-LOCAL-000000</div>
       </div>
     </div>
 
@@ -761,9 +764,9 @@ var T={
 en:{
   ctaText:'Build Your Own Card',ctaCls:'',
   sub:'Sri Lanka · QR Based Quota',subCls:'',
-  desc:'Generate your official digital fuel quota pass instantly. Upload your QR, set your quota, and carry your pass anywhere on your phone.',descCls:'',
+  desc:'Build an unofficial demo fuel-quota card. Upload your QR, set your quota — this is NOT a government pass and is not valid at fuel stations.',descCls:'',
   histNav:'History',histForm:'History',histRes:'History',
-  f1:'Instant<br>Generation',f2:'QR Code<br>Ready',f3:'Private &amp;<br>Secure',f4:'Free<br>Download',featCls:'',
+  f1:'Instant<br>Generation',f2:'QR Code<br>Ready',f3:'No Servers<br>Involved',f4:'Free<br>Download',featCls:'',
   homeLbl:'Home',
   formTitle:'PASS DETAILS',formTitleCls:'',
   formSub:'Fill in your fuel quota information',formSubCls:'',
@@ -773,15 +776,15 @@ en:{
   qrLbl:'Upload QR Code Image',qrLblCls:'',
   qzTitle:'Tap to upload your QR code',
   drag:'or drag &amp; drop here',
-  err:'Please enter your weekly quota and upload a QR image.',
+  err:'Please enter a weekly quota between 1 and 500 litres and upload a QR image.',
   genBtn:'Generate Pass',genBtnCls:'',
   backBtn:'← Back to Home',backBtnCls:'',
   resetF:'Reset &amp; Start Over',resetFCls:'',
-  trust1:'Build your own card',trust2:'Data stays on your device',trust3:'Free &amp; no registration',
+  trust1:'Build your own card',trust2:'Saved only in this browser',trust3:'Free &amp; no registration',
   spTitle:'Session Saved',spSub:'Tap to view →',
   editLbl:'Edit',
   readyTitle:'PASS READY',readyTitleCls:'',
-  readySub:'Show this at any authorized fuel station',readySubCls:'',
+  readySub:'UNOFFICIAL demo only \u2014 not valid at fuel stations',readySubCls:'',
   cardQuotaLbl:'Weekly Quota',stnLbl:'Authorized Fuel Stations',
   dlBtn:'Download Pass',dlBtnCls:'',
   editBtn:'← Edit Details',editBtnCls:'',
@@ -791,9 +794,9 @@ en:{
 si:{
   ctaText:'ඔබේ කාඩ්පත සාදන්න',ctaCls:'si-mode',
   sub:'ශ්‍රී ලංකා · QR පදනම් කෝටාව',subCls:'si-mode',
-  desc:'ඔබේ නිල ඩිජිටල් ඉන්ධන කෝටා පාස් එකක් ක්ෂණිකව සාදාගන්න. ඔබේ QR කේතය උඩුගත කර, කෝටාව සකසා, ඔබේ දුරකථනයේ ගෙන යන්න.',descCls:'si-mode',
+  desc:'නිල නොවන ආදර්ශ ඉන්ධන කෝටා කාඩ්පතක් සාදාගන්න. මෙය රජයේ පාස් එකක් නොවන අතර ඉන්ධන පිරවුම් හල්හිදී වලංගු නැත.',descCls:'si-mode',
   histNav:'ඉතිහාසය',histForm:'ඉතිහාසය',histRes:'ඉතිහාසය',
-  f1:'ක්ෂණිකව<br>සෑදීම',f2:'QR කේතය<br>සූදානම්',f3:'පෞද්ගලික &amp;<br>ආරක්ෂිත',f4:'නොමිලේ<br>බාගත කරන්න',featCls:'si-mode',
+  f1:'ක්ෂණිකව<br>සෑදීම',f2:'QR කේතය<br>සූදානම්',f3:'සර්වර්<br>නොමැත',f4:'නොමිලේ<br>බාගත කරන්න',featCls:'si-mode',
   homeLbl:'මුල් පිටුව',
   formTitle:'පාස් විස්තර',formTitleCls:'si-mode',
   formSub:'ඔබේ ඉන්ධන කෝටා තොරතුරු පුරවන්න',formSubCls:'si-mode',
@@ -803,15 +806,15 @@ si:{
   qrLbl:'QR කේත රූපය උඩුගත කරන්න',qrLblCls:'si-mode',
   qzTitle:'ඔබේ QR කේතය ස්පර්ශ කර උඩුගත කරන්න',
   drag:'හෝ මෙහි ඇද දමන්න',
-  err:'කරුණාකර ඔබේ සතිපතා කෝටාව ඇතුළු කර QR රූපය උඩුගත කරන්න.',
+  err:'කරුණාකර සතිපතා කෝටාව ලීටර් 1 ත් 500 ත් අතර ඇතුළු කර QR රූපය උඩුගත කරන්න.',
   genBtn:'පාස් සාදන්න',genBtnCls:'si-mode',
   backBtn:'← මුල් පිටුවට',backBtnCls:'si-mode',
   resetF:'යළි ආරම්භ කරන්න',resetFCls:'si-mode',
-  trust1:'ඔබේ කාඩ්පත සාදා ගන්න',trust2:'දත්ත ඔබේ උපකරණයේ රැඳේ',trust3:'නොමිලේ · ලියාපදිංචියක් නැත',
+  trust1:'ඔබේ කාඩ්පත සාදා ගන්න',trust2:'මෙම බ්‍රවුසරයේ පමණක් සේව් වේ',trust3:'නොමිලේ · ලියාපදිංචියක් නැත',
   spTitle:'සේෂන් සේව් කළා',spSub:'ස්පර්ශ කරන්න →',
   editLbl:'සංස්කරණය',
   readyTitle:'පාස් සූදානම්',readyTitleCls:'si-mode',
-  readySub:'ඕනෑම නිලධාරී ඉන්ධන පිරවුම් හල්හිදී මෙය පෙන්වන්න',readySubCls:'si-mode',
+  readySub:'නිල නොවන ආදර්ශයක් පමණි \u2014 ඉන්ධන පිරවුම් හල්හිදී වලංගු නැත',readySubCls:'si-mode',
   cardQuotaLbl:'සතිපතා කෝටාව',stnLbl:'නිලධාරී ඉන්ධන පිරවුම් හල්',
   dlBtn:'පාස් බාගන්න',dlBtnCls:'si-mode',
   editBtn:'← විස්තර සංස්කරණය',editBtnCls:'si-mode',
@@ -888,7 +891,10 @@ function saveHistory(arr){try{localStorage.setItem(HIST_KEY,JSON.stringify(arr))
 (function init(){
   try{
     var raw=localStorage.getItem(STORE_KEY);
-    if(raw){var sv=JSON.parse(raw);if(sv&&sv.qrData&&sv.quota){S=sv;}}
+    /* Stored sessions no longer contain a QR image (Fixes #2). Old saved
+       sessions that do contain qrData are migrated: the image is dropped
+       and must be re-uploaded. */
+    if(raw){var sv=JSON.parse(raw);if(sv&&sv.quota){S={quota:sv.quota,qrData:null,serial:sv.serial||'',date:sv.date||''};}}
   }catch(e){}
   document.getElementById('qr-file-input').addEventListener('change',function(e){readQR(e.target.files[0])});
   var dz=document.getElementById('qr-drop');
@@ -925,34 +931,47 @@ function applyQRPreview(dataUrl){
   document.getElementById('qr-drop').classList.add('has-file');
 }
 function goToResult(){
-  var quota=document.getElementById('inp-quota').value.trim();
+  var quotaRaw=document.getElementById('inp-quota').value.trim();
   var err=document.getElementById('error-msg');
-  if(!quota||!S.qrData){err.style.display='block';err.scrollIntoView({behavior:'smooth',block:'nearest'});return;}
+  /* Quota must be a whole number of litres, 1–500 (Fixes #1). The input's
+     min/max attributes alone do not enforce this. */
+  var quotaNum=Number(quotaRaw);
+  if(!quotaRaw||!S.qrData||!Number.isInteger(quotaNum)||quotaNum<1||quotaNum>500){err.style.display='block';err.scrollIntoView({behavior:'smooth',block:'nearest'});return;}
   err.style.display='none';
+  var quota=String(quotaNum);
   S.quota=quota;
-  S.serial='PASS-SL-'+Math.floor(100000+Math.random()*900000);
+  S.serial='DEMO-LOCAL-'+Math.floor(100000+Math.random()*900000);
   S.date=new Date().toLocaleDateString('en-GB');
-  try{localStorage.setItem(STORE_KEY,JSON.stringify(S));}catch(e){}
-  /* save to history */
+  /* Privacy (Fixes #2): the QR image is a sensitive credential. It is kept
+     only in memory for this session and NEVER written to localStorage.
+     Only quota/serial/date are persisted. */
+  try{localStorage.setItem(STORE_KEY,JSON.stringify({quota:S.quota,serial:S.serial,date:S.date}));}catch(e){}
+  /* save to history (metadata only — no QR image) */
   var hist=getHistory();
-  hist.unshift({quota:S.quota,serial:S.serial,date:S.date,qrData:S.qrData});
+  hist.unshift({quota:S.quota,serial:S.serial,date:S.date});
   if(hist.length>10)hist=hist.slice(0,10);
   saveHistory(hist);
   populateCard();showPage('result');
 }
 function populateCard(){
   document.getElementById('card-quota').textContent=S.quota+' L';
-  document.getElementById('card-qr-img').src=S.qrData;
-  document.getElementById('card-serial').textContent=S.serial||('PASS-SL-'+Math.floor(100000+Math.random()*900000));
+  var qrImg=document.getElementById('card-qr-img');
+  var qrMissing=document.getElementById('card-qr-missing');
+  if(S.qrData){qrImg.src=S.qrData;qrImg.style.display='';if(qrMissing)qrMissing.style.display='none';}
+  else{qrImg.removeAttribute('src');qrImg.style.display='none';if(qrMissing)qrMissing.style.display='block';}
+  document.getElementById('card-serial').textContent=S.serial||('DEMO-LOCAL-'+Math.floor(100000+Math.random()*900000));
 }
 function loadFromHistory(item){
-  S={quota:item.quota,qrData:item.qrData,serial:item.serial,date:item.date};
+  /* History stores metadata only — the QR image was never saved (Fixes #2),
+     so a restored pass shows a placeholder until the QR is re-uploaded. */
+  S={quota:item.quota,qrData:null,serial:item.serial,date:item.date};
   populateCard();showPage('result');
 }
 function resetAll(){
   var msg=LANG==='si'?'ඔබේ සේව් කළ පාස් සමඟ නැවත සකස් කරන්නද?':'Reset and clear your saved pass?';
   if(!confirm(msg))return;
   try{localStorage.removeItem(STORE_KEY);}catch(e){}
+  try{localStorage.removeItem(HIST_KEY);}catch(e){}
   S={quota:'',qrData:null,serial:''};
   document.getElementById('inp-quota').value='';
   document.getElementById('qr-thumb').src='';
@@ -979,11 +998,12 @@ function renderHistory(){
     +'</div>';
   hist.forEach(function(item,i){
     html+='<div class="hist-card">'
-      +'<img class="hist-qr-thumb" src="'+item.qrData+'" alt="QR"/>'
+      +'<div class="hist-qr-thumb" style="display:flex;align-items:center;justify-content:center;background:#F3F4F6;color:#9CA3AF;font-size:1.2rem">QR</div>'
       +'<div class="hist-info">'
       +'<div class="hist-serial">'+item.serial+'</div>'
       +'<div class="hist-quota"><i class="fa-solid fa-gas-pump"></i> '+item.quota+' L / week</div>'
       +'<div class="hist-date"><i class="fa-regular fa-calendar"></i> '+item.date+'</div>'
+      +'<div class="hist-date">QR image not stored — re-upload to view</div>'
       +'</div>'
       +'<div class="hist-actions">'
       +'<button class="hist-view-btn" onclick="loadFromHistory(getHistory()['+i+'])"><i class="fa-solid fa-eye"></i> '+(LANG==='si'?'බලන්න':'View')+'</button>'
