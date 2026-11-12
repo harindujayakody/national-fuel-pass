@@ -65,13 +65,13 @@ You bring your own QR code from [fuelpass.gov.lk](https://fuelpass.gov.lk), ente
 |---|---|
 | ⚡ **Instant Generation** | Card generated in your browser in seconds — no upload, no waiting |
 | 📷 **QR Upload** | Supports JPEG, PNG, WEBP — tap to upload or drag & drop |
-| 🏗️ **Official Card Design** | Matches Ministry of Power & Renewable Energy card layout |
-| 💾 **Session Persistence** | Last pass auto-saved in `localStorage` — resume any time |
-| 🕐 **Pass History** | Last 10 generated passes stored locally, all viewable & re-downloadable |
+| 🏗️ **Demo Card Design** | Unofficial demo card styled after the fuel-pass layout — clearly marked UNOFFICIAL, not a government pass |
+| 💾 **Session Persistence** | Last pass details (quota/serial/date) auto-saved in `localStorage` — resume any time. The QR image itself is never stored. |
+| 🕐 **Pass History** | Last 10 generated passes stored locally (quota/serial/date only — no QR images). View restores the details; re-upload the QR to show it. |
 | 🌐 **Bilingual Support** | Full **English** and **සිංහල (Sinhala)** across all pages |
 | 📱 **Mobile Responsive** | Hamburger menu, fits perfectly on any phone or desktop |
 | ⬇️ **Free High-Res Download** | 3× resolution PNG saved directly to your device |
-| 🔒 **100% Private** | Zero server communication — everything happens in your browser |
+| 🔒 **No Servers** | Zero server communication — everything happens in your browser. Your QR image is never stored anywhere; Reset clears saved passes and history. |
 | 📖 **Built-in Guide** | Step-by-step QR recovery guide in English and Sinhala |
 
 ---
@@ -110,14 +110,16 @@ No forms. No accounts. No waiting. **Done in under 10 seconds.**
 
 This tool is **100% client-side HTML / CSS / JavaScript**:
 
-- ✅ Your QR image is read **locally** by your browser — never uploaded anywhere
-- ✅ Quota data stored only in your browser's `localStorage` — never transmitted
+- ✅ Your QR image is read **locally** by your browser — never uploaded anywhere, and never saved to `localStorage` (it lives only in memory for the session; re-upload it after a reload)
+- ✅ Quota/serial/date stored only in your browser's `localStorage` — never transmitted. Reset clears saved passes **and** history.
 - ✅ Card rendering uses `html2canvas` — runs entirely in your browser
 - ✅ PNG downloads go **directly** to your device — no server involved
 - ✅ No analytics, no trackers, no cookies, no accounts required
 - ✅ Works fully offline after the first page load *(fonts & icons load once)*
 
 > 🔐 **We have zero access to your QR code, your quota, or your generated card.**
+>
+> ⚠️ **This is an unofficial demo tool, not a government pass.** The generated card is marked UNOFFICIAL and is not valid at fuel stations. It does not decode or verify your QR code — it displays the image you upload as-is.
 
 ---
 
